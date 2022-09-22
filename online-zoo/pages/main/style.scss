@@ -1,1 +1,131 @@
+// :root {
+//   --font-family: 'Roboto', serif;
+//   // --secondary-font-family: 'Inter', sans-serif;
+//   --white-color: #ffffff;
+//   --black-color: #000000;
+//   // --gold-color: #bdae82;
+//   --bold-font-weight: 700;
+//   --medium-font-weight: 500;
+//   --normal-font-weight: 400;
+//   --light-font-weight: 100;
+// }
+
+$font-family: 'Roboto', serif;
+$white-color: #ffffff;
+$black-color: #000000;
+$nav-color: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$bold-font-weight: 700;
+$medium-font-weight: 500;
+$normal-font-weight: 400;
+$light-font-weight: 100;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	height: 80px;
+	background: $black-color;
+	backdrop-filter: blur(2px);
+}
+
+.container {
+	width: 1160px;
+	height: 80px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	width: 82px;
+  height: 52px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1.18841px solid $white-color;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.logo__title {
+	width: 72.49px;
+  height: 44.91px;
+	display: flex;
+	margin-left: -24px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 19.0145px;
+  line-height: 121%;
+  text-align: center;
+  color: $white-color;
+}
+
+.logo__title::before {
+	content: url('../../assets/icons/logo-bamboo.svg');
+	position: relative;
+	top: 20px;
+	left: 17px;
+}
+
+.navigation__list {
+	margin-left: 63px;
+	display: flex;
+	justify-content: center;
+}
+
+.navigation__list-item {
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: $medium-font-weight;
+	font-size: 16px;
+	line-height: 140%;
+}
+
+.navigation__list-item:nth-child(even) {
+	margin-left: 58px;
+	margin-right: 58px;
+}
+
+.navigation__list-link {
+	color: $white-color;
+}
+
+.link-active,
+.navigation__list-link:hover {
+	font-family: $font-family;
+	background: $nav-color;
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	font-weight: $medium-font-weight;
+}
+
+.link-active {
+	pointer-events: none;
+}
+
+.copyright {
+	margin-left: 438px;
+}
+
+.copyright__link {
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $medium-font-weight;
+  font-size: 16px;
+  line-height: 140%;
+  color: $white-color;
+}
 
