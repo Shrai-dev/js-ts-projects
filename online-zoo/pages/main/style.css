@@ -14,7 +14,7 @@ a {
   background: #000000;
   backdrop-filter: blur(2px); }
 
-.container {
+.header__container {
   width: 1160px;
   height: 80px;
   margin: 0 auto;
@@ -28,8 +28,10 @@ a {
   justify-content: center;
   align-items: center;
   border: 1.18841px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer; }
+  border-radius: 2px; }
+  .logo:hover {
+    cursor: pointer;
+    transform: scale(1.05); }
 
 .logo__title {
   width: 72.49px;
@@ -43,12 +45,11 @@ a {
   line-height: 121%;
   text-align: center;
   color: #ffffff; }
-
-.logo__title::before {
-  content: url("../../assets/icons/logo-bamboo.svg");
-  position: relative;
-  top: 20px;
-  left: 17px; }
+  .logo__title::before {
+    content: url("../../assets/icons/logo-bamboo.svg");
+    position: relative;
+    top: 20px;
+    left: 17px; }
 
 .navigation__list {
   margin-left: 63px;
@@ -68,9 +69,15 @@ a {
 
 .navigation__list-link {
   color: #ffffff; }
+  .navigation__list-link:hover {
+    font-family: "Roboto", serif;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500; }
 
-.link-active,
-.navigation__list-link:hover {
+.link-active {
   font-family: "Roboto", serif;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   background-clip: text;
@@ -91,5 +98,78 @@ a {
   font-size: 16px;
   line-height: 140%;
   color: #ffffff; }
+  .copyright__link:hover {
+    font-family: "Roboto", serif;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500; }
+
+.watch {
+  height: 700px;
+  background-image: url("../../assets/images/main-panda.png");
+  background-size: cover;
+  background-position-y: bottom; }
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; }
+
+.watch__content {
+  width: 500px;
+  margin-top: 86px;
+  margin-left: 662px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 5; }
+  .watch__content::before {
+    content: '';
+    width: 465px;
+    height: 465px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: -74px;
+    left: -75px; }
+
+.watch__content-title {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 106.496px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff; }
+  .watch__content-title .watch__content-color {
+    color: #FFEE2E; }
+
+.watch__content-link {
+  display: inline-block;
+  width: 298px;
+  height: 54px;
+  margin-top: 61px;
+  padding: 16px 0;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff; }
+  .watch__content-link:hover {
+    background: #E47209; }
+  .watch__content-link:active {
+    background: #4B9200; }
 
 /*# sourceMappingURL=style.css.map */
