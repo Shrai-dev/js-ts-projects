@@ -172,4 +172,53 @@ a {
   .watch__content-link:active {
     background: #4B9200; }
 
+.backstage {
+  margin-top: 140px;
+  position: relative; }
+  .backstage::after {
+    content: url("../../assets/images/backstage-flower_foto.png");
+    position: absolute;
+    top: -128px;
+    right: 0; }
+
+.backstage__image {
+  width: 609px;
+  height: 403px;
+  margin-left: -1px;
+  margin-top: -5px;
+  background-image: url("../../assets/images/backstage-bamboo-cap.png"); }
+
+.backstage__content {
+  width: 465px;
+  margin-left: 87px; }
+
+.backstage__content-title {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #333B41; }
+
+.backstage__content-text {
+  margin-top: 22px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #333B41; }
+
+.backstage__content-subtitle {
+  margin-top: 54px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333B41; }
+  .backstage__content-subtitle + .backstage__content-text {
+    margin-top: 34px;
+    line-height: 140%; }
+
 /*# sourceMappingURL=style.css.map */

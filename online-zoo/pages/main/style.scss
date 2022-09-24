@@ -1,14 +1,16 @@
 $font-family: 'Roboto', serif;
+$bold-font-weight: 700;
+$medium-font-weight: 500;
+$normal-font-weight: 400;
+$light-font-weight: 100;
+
 $white-color: #ffffff;
 $black-color: #000000;
 $yellow-color: #FFEE2E;
 $orange-color: #E47209;
 $green-color: #4B9200;
+$black-blue-color: #333B41;
 $orange-gradient-color: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-$bold-font-weight: 700;
-$medium-font-weight: 500;
-$normal-font-weight: 400;
-$light-font-weight: 100;
 
 * {
 	margin: 0;
@@ -196,7 +198,7 @@ a {
 	padding: 16px 0;
 	background: $orange-gradient-color;
   border-radius: 25px;
-	font-family:  $font-family;
+	font-family: $font-family;
   font-style: normal;
   font-weight: $medium-font-weight;
   font-size: 16px;
@@ -209,6 +211,63 @@ a {
 	}
 	&:active {
 		background: $green-color;
+	}
+}
+
+.backstage {
+		margin-top: 140px;
+		position: relative;
+		&::after {
+			content: url('../../assets/images/backstage-flower_foto.png');
+			position: absolute;
+			top: -128px;
+			right: 0;
+		}
+}
+
+.backstage__image {
+	width: 609px;
+	height: 403px;
+	margin-left: -1px;
+	margin-top: -5px;
+	background-image: url('../../assets/images/backstage-bamboo-cap.png');
+}
+
+.backstage__content {
+	width: 465px;
+	margin-left: 87px;
+}
+
+.backstage__content-title {
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: $normal-font-weight;
+	font-size: 48px;
+	line-height: 120%;
+	color: $black-blue-color;
+}
+
+.backstage__content-text {
+	margin-top: 22px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 16px;
+  line-height: 130%;
+  color: $black-blue-color;
+}
+
+.backstage__content-subtitle {
+	margin-top: 54px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 24px;
+  line-height: 120%;
+  color: $black-blue-color;
+	+ .backstage__content-text {
+		margin-top: 34px;
+		line-height: 140%;
 	}
 }
 
