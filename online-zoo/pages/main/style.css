@@ -151,7 +151,7 @@ a {
   .watch__content-title .watch__content-color {
     color: #FFEE2E; }
 
-.watch__content-link {
+.link {
   display: inline-block;
   width: 298px;
   height: 54px;
@@ -167,10 +167,13 @@ a {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff; }
-  .watch__content-link:hover {
+  .link:hover {
     background: #E47209; }
-  .watch__content-link:active {
+  .link:active {
     background: #4B9200; }
+  .link.pets__link {
+    margin-top: 80px;
+    margin-bottom: 100px; }
 
 .backstage {
   margin-top: 140px;
@@ -220,5 +223,99 @@ a {
   .backstage__content-subtitle + .backstage__content-text {
     margin-top: 34px;
     line-height: 140%; }
+
+.pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .pets::before {
+    content: url("../../assets/images/pets-palm_foto.png");
+    position: absolute;
+    left: 0;
+    bottom: -3px; }
+  .pets::after {
+    content: url("../../assets/images/pets-strelitzia1.png");
+    position: absolute;
+    right: 0;
+    bottom: -3px; }
+
+.pets__slider {
+  margin-top: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.pets__button-arrow {
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer; }
+  .pets__button-arrow:hover {
+    background: #E47209; }
+  .pets__button-arrow:active {
+    background: #4B9200; }
+  .pets__button-arrow:first-child {
+    margin-right: 20px;
+    margin-top: -3px; }
+  .pets__button-arrow:last-child {
+    margin-left: 18px;
+    margin-top: -3px; }
+
+.pets__slider-container {
+  margin-left: -2px; }
+
+.pets__cards {
+  width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px; }
+
+.pets__card {
+  width: 366px;
+  height: 426px;
+  border: 2px solid transparent;
+  background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(to right bottom, #fa6f32, #fe9013) border-box;
+  border-radius: 5px; }
+
+.pets__card-image {
+  width: 362px;
+  height: 364px; }
+  .pets__card-image:hover {
+    transform: scale(1.112); }
+
+.pets__card-content {
+  position: relative;
+  margin-left: 13px; }
+
+.pets__card-title {
+  margin-top: 5px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #000000; }
+
+.pets__card-desc {
+  margin-top: -3px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #000000; }
+
+.pets__card-icon {
+  position: absolute;
+  right: 10px;
+  top: 0; }
+  .pets__card-icon.meat-icon {
+    right: 6px;
+    top: -2px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@ $font-family: 'Roboto', serif;
 $bold-font-weight: 700;
 $medium-font-weight: 500;
 $normal-font-weight: 400;
+$thin-font-weight: 300;
 $light-font-weight: 100;
 
 $white-color: #ffffff;
@@ -10,7 +11,8 @@ $yellow-color: #FFEE2E;
 $orange-color: #E47209;
 $green-color: #4B9200;
 $black-blue-color: #333B41;
-$orange-gradient-color: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$orange-gradient-color-button: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$orange-gradient-color-border: linear-gradient(to right bottom, #fa6f32, #fe9013);
 
 * {
 	margin: 0;
@@ -97,7 +99,7 @@ a {
 	color: $white-color;
 	&:hover {
 		font-family: $font-family;
-	  background: $orange-gradient-color;
+	  background: $orange-gradient-color-button;
 	  background-clip: text;
 	  -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -107,7 +109,7 @@ a {
 
 .link-active {
 	font-family: $font-family;
-	background: $orange-gradient-color;
+	background: $orange-gradient-color-button;
 	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -131,7 +133,7 @@ a {
   color: $white-color;
 	&:hover {
 		font-family: $font-family;
-	  background: $orange-gradient-color;
+	  background: $orange-gradient-color-button;
 	  background-clip: text;
 	  -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -167,7 +169,7 @@ a {
     content: '';
     width: 465px;
     height: 465px;
-		background: $orange-gradient-color;
+		background: $orange-gradient-color-button;
 		border-radius: 50%;
 		position: absolute;
 		z-index: -1;
@@ -190,13 +192,13 @@ a {
 	}
 }
 
-.watch__content-link {
+.link {
 	display: inline-block;
 	width: 298px;
   height: 54px;
 	margin-top: 61px;
 	padding: 16px 0;
-	background: $orange-gradient-color;
+	background: $orange-gradient-color-button;
   border-radius: 25px;
 	font-family: $font-family;
   font-style: normal;
@@ -211,6 +213,10 @@ a {
 	}
 	&:active {
 		background: $green-color;
+	}
+	&.pets__link {
+		margin-top: 80px;
+		margin-bottom: 100px;
 	}
 }
 
@@ -268,6 +274,119 @@ a {
 	+ .backstage__content-text {
 		margin-top: 34px;
 		line-height: 140%;
+	}
+}
+
+.pets {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&::before {
+		content: url('../../assets/images/pets-palm_foto.png');
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+	}
+	&::after {
+		content: url('../../assets/images/pets-strelitzia1.png');
+		position: absolute;
+		right: 0;
+		bottom: -3px;
+	}
+}
+
+.pets__slider {
+	margin-top: 175px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pets__button-arrow {
+	width: 62px;
+  height: 62px;
+	background: $orange-gradient-color-button;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	&:hover {
+		background: $orange-color;
+	}
+	&:active {
+		background: $green-color;
+	}
+	&:first-child {
+		margin-right: 20px;
+		margin-top: -3px;
+	}
+	&:last-child {
+		margin-left: 18px;
+		margin-top: -3px;
+	}
+}
+
+.pets__slider-container {
+	margin-left: -2px;
+}
+
+.pets__cards {
+	width: 1160px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 30px;
+}
+
+.pets__card {
+	width: 366px;
+	height: 426px;
+	border: 2px solid transparent;
+  background:  linear-gradient($white-color 0 0) padding-box, $orange-gradient-color-border border-box;
+  border-radius: 5px;
+}
+
+.pets__card-image {
+	width: 362px;
+	height: 364px;
+	&:hover {
+		transform: scale(1.112);
+	}
+}
+
+.pets__card-content {
+	position: relative;
+	margin-left: 13px;
+}
+
+.pets__card-title {
+	margin-top: 5px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $medium-font-weight;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $black-color;
+}
+
+.pets__card-desc {
+	margin-top: -3px;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: $thin-font-weight;
+	font-size: 15px;
+	line-height: 120%;
+	color: $black-color;
+}
+
+.pets__card-icon {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	&.meat-icon {
+		right: 6px;
+    top: -2px;
 	}
 }
 
