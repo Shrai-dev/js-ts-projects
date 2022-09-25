@@ -9,10 +9,12 @@ $white-color: #ffffff;
 $black-color: #000000;
 $yellow-color: #FFEE2E;
 $orange-color: #E47209;
+$orange-color-title: #FE9013;
 $green-color: #4B9200;
 $black-blue-color: #333B41;
 $orange-gradient-color-button: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 $orange-gradient-color-border: linear-gradient(to right bottom, #fa6f32, #fe9013);
+// $section-gradient-color: ;
 
 * {
 	margin: 0;
@@ -218,6 +220,10 @@ a {
 		margin-top: 80px;
 		margin-bottom: 100px;
 	}
+	&.peek-friend__link {
+		margin-top: 60px;
+		align-self: center;
+	}
 }
 
 .backstage {
@@ -287,13 +293,13 @@ a {
 		content: url('../../assets/images/pets-palm_foto.png');
 		position: absolute;
 		left: 0;
-		bottom: -3px;
+		bottom: -4px;
 	}
 	&::after {
 		content: url('../../assets/images/pets-strelitzia1.png');
 		position: absolute;
 		right: 0;
-		bottom: -3px;
+		bottom: -4px;
 	}
 }
 
@@ -390,3 +396,115 @@ a {
 	}
 }
 
+.peek-friend {
+	height: 1004px;
+	background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+}
+
+.peek-friend__content {
+	height: 835px;
+	margin-top: 69px;
+	display: flex;
+	flex-direction: column;
+	background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+
+.peek-friend__content-title {
+	margin-top: 41px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: $orange-color-title;
+}
+
+.peek-friend__content-subtitle {
+	margin-top: 30px;
+	margin-left: 99px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 24px;
+  line-height: 120%;
+	text-align: left;
+  color: $black-blue-color;
+}
+
+.peek-friend__content-text {
+	margin-top: 10px;
+	margin-left: 99px;
+	width: 863px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: left;
+  color: $black-blue-color;
+	&.bold {
+		margin-top: 42px;
+		width: 1061px;
+		font-weight: $medium-font-weight;
+	}
+}
+
+.peek-friend__content-link {
+	border-bottom: 1px solid $orange-color-title;
+	color: $black-blue-color;
+}
+
+.peek-friend__content-subheading {
+	margin-top: 61px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 36px;
+  line-height: 130%;
+  color: $black-blue-color;
+	text-align: center;
+}
+
+.peek-friend__flow {
+	margin-top: 39px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.peek-friend__card-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 168px;
+	height: 168px;
+	background-color: $white-color;
+	border: 1px solid transparent;
+  background: linear-gradient($white-color 0 0) padding-box, $orange-gradient-color-border border-box;
+  border-radius: 5px;
+}
+
+.peek-friend__card-text {
+	width: 168px;
+	height: 46px;
+	margin-top: 30px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 16px;
+  line-height: 140%;
+  color: $black-blue-color;
+}
+
+.peek-friend__arrow {
+	width: 69px;
+	height: 35px;
+	margin-left: 30px;
+	margin-right: 31px;
+	margin-top: -90px;
+	background-image: url('../../assets/icons/peek-friend-arrow.svg');
+}
