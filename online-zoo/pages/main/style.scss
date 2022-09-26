@@ -519,6 +519,19 @@ a {
 	background-image: url('../../assets/icons/peek-friend-arrow.svg');
 }
 
+.testimonials {
+	margin-bottom: 180px;
+	position: relative;
+	&::after {
+		content: url('../../assets/images/testimonials-leaf_foto.png');
+		height: 295px;
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		bottom: -200px;
+	}
+}
+
 .testimonials__title {
 	margin-top: 141px;
 	font-family: $font-family;
