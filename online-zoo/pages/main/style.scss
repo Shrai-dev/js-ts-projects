@@ -12,9 +12,11 @@ $orange-color: #E47209;
 $orange-color-title: #FE9013;
 $green-color: #4B9200;
 $black-blue-color: #333B41;
+$light-gray-color: #F1F3F2;
+$gray-smoky-color: #BDBDBD;
+$gray-color: #767474;
 $orange-gradient-color-button: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 $orange-gradient-color-border: linear-gradient(to right bottom, #fa6f32, #fe9013);
-// $section-gradient-color: ;
 
 * {
 	margin: 0;
@@ -155,6 +157,9 @@ a {
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
+	&.testimonials__container {
+		flex-direction: column;
+	}
 }
 
 .watch__content {
@@ -223,6 +228,11 @@ a {
 	&.peek-friend__link {
 		margin-top: 60px;
 		align-self: center;
+	}
+	&.testimonials__link {
+		margin-top: 31px;
+		border-radius: 5px;
+		align-self: flex-start;
 	}
 }
 
@@ -507,4 +517,88 @@ a {
 	margin-right: 31px;
 	margin-top: -90px;
 	background-image: url('../../assets/icons/peek-friend-arrow.svg');
+}
+
+.testimonials__title {
+	margin-top: 141px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+  color: $black-blue-color;
+}
+
+.testimonials__slider {
+	margin-top: 47px;
+	width: 1160px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.testimonials__slider-inner {
+	display: flex;
+}
+
+.slider__card {
+	width: 268px;
+	height: 391px;
+	padding: 13px 15px 19px 15px;;
+	border: 2px solid transparent;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+	box-shadow: inset 0px 0px 0px 100vw $light-gray-color;
+  border-radius: 20px;
+	&:nth-child(2) {
+    margin-left: 30px;
+    margin-right: 29px;
+	}
+	&:nth-child(3) {
+    margin-right: 32px;
+	}
+}
+
+.slider__card-inner {
+	display: flex;
+}
+
+.slider__card-info {
+	margin-left: 10px;
+}
+
+.slider__card-title {
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $normal-font-weight;
+  font-size: 16px;
+  line-height: 120%;
+  color: $black-color;
+}
+
+.slider__card-location {
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $thin-font-weight;
+  font-size: 15px;
+  line-height: 120%;
+  color: $gray-smoky-color;
+}
+
+.slider__card-review {
+	width: 237px;
+	margin-top: 10px;
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $thin-font-weight;
+  font-size: 15px;
+  line-height: 120%;
+  color: $gray-color;
+}
+
+.testimonials__slider-range {
+	width: 599px;
+	height: 8px;
+	margin-top: 21px;
+	text-align: center;
 }
