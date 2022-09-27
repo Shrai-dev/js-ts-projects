@@ -224,6 +224,8 @@ a {
   margin-left: 64px; }
 
 .animal__widget-title {
+  margin-top: 45px;
+  margin-left: 3px;
   font-family: "Roboto", serif;
   font-style: normal;
   font-weight: 400;
@@ -231,11 +233,97 @@ a {
   line-height: 140%;
   color: #000000; }
 
+.animal__widget-row {
+  margin-top: 16px;
+  height: 82px; }
+
+.pay-slider {
+  width: 976px; }
+
+.pay-slider__bullets {
+  display: flex;
+  align-items: center;
+  width: 976px;
+  height: 27px;
+  background: #404950;
+  border-radius: 2px;
+  padding-left: 26px;
+  padding-right: 30px;
+  position: relative; }
+  .pay-slider__bullets::before {
+    content: '';
+    border-bottom: 2px solid #72828E;
+    width: 915px;
+    height: 2px;
+    position: absolute;
+    top: 10px; }
+
+.pay__input {
+  display: none; }
+
+.pay__label {
+  cursor: pointer; }
+  .pay__label:nth-child(2n) {
+    margin-right: 120px; }
+
+.pay__bullet-btn {
+  width: 10px;
+  height: 10px;
+  background: #FFEE2E;
+  border-radius: 50%;
+  position: relative; }
+
+.pay__bullet-btn--checked::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #FE9013;
+  border-radius: 50%;
+  top: -8.5px;
+  left: -8px; }
+.pay__bullet-btn--checked::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #FE9013;
+  border-radius: 50%;
+  top: -16.5px;
+  left: -16px; }
+
+.pay-slider__desc {
+  margin-top: 12px;
+  display: flex;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333B41; }
+
+.pay-slider__amount:nth-child(1), .pay-slider__amount:nth-child(2), .pay-slider__amount:nth-child(3) {
+  margin-right: 62px; }
+.pay-slider__amount:nth-child(4), .pay-slider__amount:nth-child(5), .pay-slider__amount:nth-child(6) {
+  margin-right: 75px; }
+.pay-slider__amount:nth-child(7) {
+  margin-right: 90px; }
+
+.pay-slider__amount--active {
+  color: #FE9013; }
+  .pay-slider__amount--active > svg path {
+    fill: #FE9013; }
+
 .animal__donate {
+  margin-top: 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
 
 .animal__donate-amount {
   width: 268px;
@@ -254,6 +342,11 @@ a {
     outline: none;
     border: 1px solid #BDBDBD;
     border-radius: 2px; }
+
+.animal__donate-icon {
+  position: absolute;
+  top: 15px;
+  left: 61.5%; }
 
 .animal__choice {
   margin-top: 24px;
