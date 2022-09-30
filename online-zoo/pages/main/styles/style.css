@@ -46,7 +46,7 @@ a {
   text-align: center;
   color: #ffffff; }
   .logo__title::before {
-    content: url("../../assets/icons/logo-bamboo.svg");
+    content: url("../../../assets/icons/logo-bamboo.svg");
     position: relative;
     top: 20px;
     left: 17px; }
@@ -108,7 +108,7 @@ a {
 
 .watch {
   height: 700px;
-  background-image: url("../../assets/images/main-panda.png");
+  background-image: url("../../../assets/images/main-panda.png");
   background-size: cover;
   background-position-y: bottom; }
 
@@ -191,7 +191,7 @@ a {
   margin-top: 140px;
   position: relative; }
   .backstage::after {
-    content: url("../../assets/images/backstage-flower_foto.png");
+    content: url("../../../assets/images/backstage-flower_foto.png");
     position: absolute;
     top: -128px;
     right: 0; }
@@ -201,7 +201,7 @@ a {
   height: 403px;
   margin-left: -1px;
   margin-top: -5px;
-  background-image: url("../../assets/images/backstage-bamboo-cap.png"); }
+  background-image: url("../../../assets/images/backstage-bamboo-cap.png"); }
 
 .backstage__content {
   width: 465px;
@@ -243,12 +243,12 @@ a {
   align-items: center;
   position: relative; }
   .pets::before {
-    content: url("../../assets/images/pets-palm_foto.png");
+    content: url("../../../assets/images/pets-palm_foto.png");
     position: absolute;
     left: 0;
     bottom: -4px; }
   .pets::after {
-    content: url("../../assets/images/pets-strelitzia1.png");
+    content: url("../../../assets/images/pets-strelitzia1.png");
     position: absolute;
     right: 0;
     bottom: -4px; }
@@ -429,13 +429,13 @@ a {
   margin-left: 30px;
   margin-right: 31px;
   margin-top: -90px;
-  background-image: url("../../assets/icons/peek-friend-arrow.svg"); }
+  background-image: url("../../../assets/icons/peek-friend-arrow.svg"); }
 
 .testimonials {
   margin-bottom: 180px;
   position: relative; }
   .testimonials::after {
-    content: url("../../assets/images/testimonials-leaf_foto.png");
+    content: url("../../../assets/images/testimonials-leaf_foto.png");
     height: 295px;
     position: absolute;
     z-index: -1;
