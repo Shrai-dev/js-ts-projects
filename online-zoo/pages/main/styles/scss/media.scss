@@ -10,6 +10,17 @@
 			background-position-x: -80px;
 			background-size: cover;
   }
+	.pets {
+		&::before {
+			content: url('../../../../assets/images/pets-palm_foto1.png');
+			bottom: -45px;
+		}
+		&::after {
+			transform: scale(65.5%);
+			right: -63px;
+      bottom: -92px;
+		}
+	}
 }
 
 @media screen and (max-width: 1400px) {
@@ -17,6 +28,33 @@
 		position: relative;
 		z-index: 10;
 	}
+	.pets__slider {
+		margin-top: 139px;
+		position: relative;
+	}
+	.pets__button-arrow {
+		position: absolute;
+	}
+	.pets__cards {
+		width: 943px;
+		gap: 90px 29px;
+	}
+	.pets__card {
+		width: 295px;
+		height: 355px;
+	}
+	.pets__card-image {
+		width: 291px;
+		height: 294px;
+	}
+	.pets__button-arrow:first-child {
+    margin-right: 233px;
+    margin-top: 0px;
+  }
+  .pets__button-arrow:last-child {
+  	margin-left: 233px;
+  	margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 1225px) {
@@ -200,6 +238,76 @@
 			margin-top: 20px;
 		}
 	}
+	.pets {
+		&::before {
+			transform: scale(100%);
+      bottom: -7px;
+      left: -60px;
+		}
+		&::after {
+			transform: scale(48%);
+      right: -95px;
+      bottom: -77px;
+		}
+	}
+	.pets__slider {
+		margin-top: 77px;
+	}
+	.pets__slider-container {
+    margin-left: 0;
+  }
+	.pets__cards {
+		width: 600px;
+		gap: 90px 29px;
+	}
+	.pets__button-arrow:first-child {
+    margin-right: 93px;
+    margin-top: -6px;
+  }
+	.pets__button-arrow:last-child {
+    margin-left: 91px;
+    margin-top: -6px;
+  }
+	.pets__card {
+		width: 285px;
+		height: 332px;
+	}
+	.pets__card {
+		&:nth-child(4) {
+			display: none;
+		}
+		&:nth-child(5) {
+			display: none;
+		}
+	}
+	.pets__card-image {
+		width: 281px;
+		height: 285px;
+	}
+	.pets__card-title {
+		margin-top: 1px;
+		font-size: 12.4695px;
+	}
+	.pets__card-desc {
+		font-size: 11.6901px;
+	}
+	.pets__card-icon {
+		width: 25.72px;
+		height: 28.84px;
+		right: 8px;
+    top: 2px;
+		&.meat-icon {
+			width: 37.41px;
+		  height: 29.62px;
+			right: 4px;
+      top: 1px;
+		}
+	}
+	.link {
+		&.pets__link {
+			margin-top: 60px;
+		}
+	}
 }
 
 @media screen and (max-width: 940px) {
@@ -278,6 +386,10 @@
 			margin-left: 14px;
 			margin-bottom: -47px;
 		}
+		&.pets__link {
+			margin-top: 20px;
+			margin-left: -2px;
+	  }
 	}
 	.backstage__content {
     width: 300px;
@@ -285,6 +397,33 @@
 	.backstage__content-title {
 		font-size: 24px;
 	}
+	.pets {
+		&::before {
+			transform: scale(36%);
+			bottom: -27px;
+			left: -74px;
+		}
+		&::after {
+			content: url('../../../../assets/images/pets-strelitzia2.png');
+			transform: scale(1);
+			right: 0;
+      bottom: 32px;
+		}
+	}
+	.pets__slider {
+    margin-top: 37px;
+}
+	.pets__button-arrow {
+		display: none;
+	}
+	.pets__cards {
+		width: 285.24px;
+		flex-direction: column;
+    gap: 20px 0;
+  }
+	.pets__card-image {
+    height: 283px;
+  }
 }
 
 @media screen and (max-width: 490px) {
