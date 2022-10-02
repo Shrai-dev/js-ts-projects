@@ -1,6 +1,12 @@
 @media screen and (max-width: 1599px) {
   .copyright {
-    margin-left: 37.75%; } }
+    margin-left: 37.75%; }
+
+  .backstage__image {
+    width: 455px;
+    height: 408px;
+    background-position-x: -80px;
+    background-size: cover; } }
 @media screen and (max-width: 1400px) {
   .header {
     position: relative;
@@ -11,7 +17,8 @@
     margin: 0 30px; }
 
   .container {
-    width: 98vw; }
+    width: 940px;
+    margin: 0 30px; }
 
   .navigation__list-item:nth-child(even) {
     margin-left: 48px;
@@ -21,7 +28,12 @@
     margin-left: 27.4%; }
 
   .watch__content {
-    margin-left: 534px; } }
+    margin-left: 534px; }
+
+  .backstage {
+    margin-top: 100px; }
+    .backstage::after {
+      content: ''; } }
 @media screen and (max-width: 1100px) {
   .watch {
     height: 504px;
@@ -31,7 +43,7 @@
 
   .watch__content {
     margin-top: 42.8px;
-    margin-left: 454px; }
+    margin-left: 434px; }
 
   .watch__content-title {
     font-size: 85px; }
@@ -43,16 +55,24 @@
       left: -8px; }
 
   .link {
-    margin-top: 41px; } }
+    margin-top: 41px; }
+
+  .backstage__content {
+    width: 454px;
+    margin-left: 31px; } }
 @media screen and (max-width: 999px) {
   .header {
-    height: 33px; }
+    height: 34px; }
 
   .header__container {
     width: 96vw;
     height: 34px;
     margin: 0 20px;
     justify-content: space-between; }
+
+  .container {
+    width: 96vw;
+    margin: 0 auto; }
 
   .logo {
     width: 47px;
@@ -141,7 +161,25 @@
     padding: 134px 0 463px 127px; }
 
   .show .header__nav-item {
-    margin: 0; } }
+    margin: 0; }
+
+  .backstage {
+    margin-top: 60px; }
+    .backstage::after {
+      content: url("../../../../assets/images/backstage-flower_foto1.png");
+      top: -64px; }
+
+  .backstage__image {
+    display: none; }
+
+  .backstage__content {
+    margin-left: 10px;
+    width: 482px; }
+
+  .backstage__content-subtitle {
+    margin-top: 30px; }
+    .backstage__content-subtitle + .backstage__content-text {
+      margin-top: 20px; } }
 @media screen and (max-width: 940px) {
   .watch {
     height: 439px;
@@ -203,7 +241,13 @@
   .link.watch__content-link {
     align-self: center;
     margin-left: 14px;
-    margin-bottom: -47px; } }
+    margin-bottom: -47px; }
+
+  .backstage__content {
+    width: 300px; }
+
+  .backstage__content-title {
+    font-size: 24px; } }
 @media screen and (max-width: 490px) {
   .header {
     height: 34px; }
@@ -230,10 +274,15 @@
     margin-right: 7px; }
     .watch__content-title::before {
       content: '';
-      width: 119.09px;
-      height: 119.09px;
       top: -19px;
-      left: -19px; } }
+      left: -19px; }
+
+  .backstage {
+    margin-top: 60px; } }
+@media screen and (max-width: 420px) {
+  .backstage::after {
+    content: url("../../../../assets/images/backstage-flower_foto2.png");
+    top: -67px; } }
 @media screen and (max-width: 320px) {
   .watch {
     height: 187px;
@@ -243,6 +292,20 @@
 
   .link.watch__content-link {
     margin-left: 0px;
-    margin-top: 61px; } }
+    margin-top: 61px; }
+
+  .backstage {
+    margin-top: 105px; }
+
+  .backstage__content {
+    margin-left: 3px; }
+
+  .backstage__content-text {
+    margin-top: 10px; }
+
+  .backstage__content-subtitle {
+    margin-top: 20px; }
+    .backstage__content-subtitle + .backstage__content-text {
+      margin-top: 10px; } }
 
 /*# sourceMappingURL=media.css.map */
