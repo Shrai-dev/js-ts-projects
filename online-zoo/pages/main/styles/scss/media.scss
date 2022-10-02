@@ -21,12 +21,24 @@
       bottom: -92px;
 		}
 	}
+	.peek-friend {
+		margin-top: 40px;
+	}
 }
 
 @media screen and (max-width: 1400px) {
 	.header {
 		position: relative;
 		z-index: 10;
+	}
+	.container {
+    width: 940px;
+		margin: 0;
+  }
+	.link {
+		&.peek-friend__link {
+			margin-top: 71px;
+		}
 	}
 	.pets__slider {
 		margin-top: 139px;
@@ -54,6 +66,37 @@
   .pets__button-arrow:last-child {
   	margin-left: 233px;
   	margin-top: 0;
+  }
+	.peek-friend {
+		height: 876px;
+		display: flex;
+		justify-content: center;
+	}
+	.peek-friend__container {
+		margin-top: 6px;
+	}
+	.peek-friend__content {
+		width: 940px;
+		height: 796px;
+		margin-top: -17px;
+	}
+	.peek-friend__content-title {
+    margin-top: 30px;
+  }
+	.peek-friend__content-subtitle {
+		margin-top: 21px;
+		margin-left: 49px;
+	}
+	.peek-friend__content-text {
+		width: 813px;
+		margin-left: 49px;
+		&.bold {
+			width: 813px;
+			margin-top: 20px;
+		}
+	}
+	.peek-friend__content-subheading {
+    margin-top: 40px;
   }
 }
 
@@ -127,6 +170,11 @@
 	.container {
 		width: 96vw;
 		margin: 0 auto;
+		&.peek-friend__container {
+			width: 100vw;
+			height: 781px;
+			margin: 0;
+		}
 	}
 	.logo {
 		width: 47px;
@@ -307,6 +355,59 @@
 		&.pets__link {
 			margin-top: 60px;
 		}
+		&.peek-friend__link {
+			margin-top: 39px;
+		}
+	}
+	.peek-friend {
+    margin-top: 3px;
+		height: 780px;
+  }
+	.peek-friend__content {
+		width: 96vw;
+		height: 741px;
+		margin-top: -1px;
+	}
+	.peek-friend__content-title {
+    margin-top: 10px;
+		font-size: 42px;
+  }
+	.peek-friend__content-subtitle {
+		margin-top: 22px;
+		margin-left: 20px;
+		font-size: 22px;
+	}
+	.peek-friend__content-text {
+		width: 600px;
+		margin-top: 11px;
+		margin-left: 20px;
+		&.bold {
+			width: 600px;
+			margin-top: 19px;
+		}
+	}
+	.peek-friend__content-subheading {
+    margin-top: 30px;
+  }
+	.peek-friend__flow {
+		margin-top: 19px;
+		padding: 0 32px 0 20px;
+		justify-content: space-between;
+    position: relative;
+  }
+	.peek-friend__arrow {
+		width: 89px;
+		height: 29px;
+		position: absolute;
+		background-image: url('../../../../assets/icons/peek-friend-arrow-green.svg');
+		&.first-arrow {
+			top: 74px;
+      left: 127px;
+		}
+		&.second-arrow {
+			top: 73px;
+      right: 155px;
+		}
 	}
 }
 
@@ -362,6 +463,12 @@
 }
 
 @media screen and (max-width: 625px) {
+	.container {
+		&.peek-friend__container {
+			width: calc(100vw - 20px);
+			margin: 0 10px;
+		}
+	}
 	.watch__content {
     flex-direction: column;
   }
@@ -390,6 +497,9 @@
 			margin-top: 20px;
 			margin-left: -2px;
 	  }
+		&.peek-friend__link {
+			margin-top: 37px;
+		}
 	}
 	.backstage__content {
     width: 300px;
@@ -423,6 +533,62 @@
   }
 	.pets__card-image {
     height: 283px;
+  }
+	.peek-friend {
+    margin-top: -41px;
+		height: 1082px;
+  }
+	.peek-friend__content {
+		height: 1042px;
+		margin-top: 303px;
+	}
+	.peek-friend__content-title {
+    margin-top: 20px;
+		font-size: 24px;
+  }
+	.peek-friend__content-subtitle {
+		width: 297px;
+		margin-top: 10px;
+		margin-left: 0;
+		font-size: 18px;
+		text-align: center;
+		align-self: center;
+	}
+	.peek-friend__content-text {
+		display: none;
+		&.bold {
+			display: none;
+		}
+	}
+	.peek-friend__content-subheading {
+    margin-top: 20px;
+		font-size: 24px;
+  }
+	.peek-friend__flow {
+		flex-direction: column;
+		padding: 0;
+  }
+	.peek-friend__card {
+		&:first-child {
+		  margin-bottom: 18px;
+  	}
+		&:last-child {
+		  margin-top: 27px;
+  	}
+  }
+	.peek-friend__arrow {
+		transform: rotate(85deg);
+		&.first-arrow {
+			top: 282px;
+			left: 176px;
+		}
+		&.second-arrow {
+			top: 531px;
+      right: -26px;
+		}
+	}
+	.peek-friend__card-text {
+    margin-top: 10px;
   }
 }
 
