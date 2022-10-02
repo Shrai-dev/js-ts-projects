@@ -1,6 +1,4 @@
 @import 'variables.scss';
-@import 'media.scss';
-
 
 * {
 	margin: 0;
@@ -127,6 +125,10 @@ a {
     -webkit-text-fill-color: transparent;
 	  font-weight: $medium-font-weight;
 	}
+}
+
+.burger__menu {
+	display: none;
 }
 
 .watch {
