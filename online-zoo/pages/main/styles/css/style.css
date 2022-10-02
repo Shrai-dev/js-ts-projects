@@ -130,19 +130,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  z-index: 5; }
-  .watch__content::before {
-    content: '';
-    width: 465px;
-    height: 465px;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-    top: -74px;
-    left: -75px; }
+  align-items: center; }
 
 .watch__content-title {
   font-family: "Roboto", serif;
@@ -152,7 +140,19 @@ a {
   line-height: 75%;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff; }
+  color: #ffffff;
+  position: relative;
+  z-index: 5; }
+  .watch__content-title::before {
+    content: '';
+    width: 465px;
+    height: 465px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: -74px;
+    left: -75px; }
   .watch__content-title .watch__content-color {
     color: #FFEE2E; }
 
