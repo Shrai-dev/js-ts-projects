@@ -76,9 +76,17 @@ a {
 	line-height: 140%;
 }
 
-.navigation__list-item:nth-child(even) {
-	margin-left: 58px;
-	margin-right: 58px;
+.navigation__list-item {
+	&:nth-child(2) {
+		margin-left: 58px;
+		margin-right: 58px;
+	}
+	&:nth-child(3) {
+		margin-right: 58px;
+	}
+	&:nth-child(5) {
+		margin-left: 58px;
+	}
 }
 
 .navigation__list-link {
