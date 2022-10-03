@@ -46,7 +46,7 @@ a {
   text-align: center;
   color: #ffffff; }
   .logo__title::before {
-    content: url("../../../assets/icons/logo-bamboo.svg");
+    content: url("../../../../assets/icons/logo-bamboo.svg");
     position: relative;
     top: 20px;
     left: 17px; }
@@ -108,7 +108,7 @@ a {
 
 .favorite-animal {
   height: 386px;
-  background-image: url("../../../assets/images/main-panda.png");
+  background-image: url("../../../../assets/images/main-panda.png");
   background-size: cover;
   background-position-y: -198px; }
 
@@ -218,7 +218,7 @@ a {
   height: 14px;
   margin-top: 22px;
   margin-left: -11px;
-  background-image: url("../../../assets/icons/x_icon.svg"); }
+  background-image: url("../../../../assets/icons/x_icon.svg"); }
 
 .animal__content-image {
   margin-left: 64px; }
