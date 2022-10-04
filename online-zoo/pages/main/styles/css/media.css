@@ -393,7 +393,7 @@
     height: 780px; }
 
   .peek-friend__content {
-    width: 96vw;
+    width: 600px;
     height: 741px;
     margin-top: -1px; }
 
@@ -562,15 +562,16 @@
   .link.watch__content-link {
     margin-left: 5px; } }
 @media screen and (max-width: 639px) {
+  .container.peek-friend__container {
+    width: 300px;
+    margin: 0 10px; }
+
   .footer__copyright {
     margin-left: 30px; } }
 @media screen and (max-width: 625px) {
   .header__container {
     margin: 0 10px; }
 
-  .container.peek-friend__container {
-    width: calc(100vw - 20px);
-    margin: 0 10px; }
   .container.testimonials__container {
     width: 93vw; }
 
