@@ -141,9 +141,8 @@
 			margin-left: 48px;
 			margin-right: 48px;
 		}
-		&:nth-child(4) {
-			margin-left: 48px;
-			margin-right: 0;
+		&:nth-child(3) {
+			margin-right: 48px;
 		}
 	}
 	.copyright {
@@ -166,7 +165,7 @@
   }
 	.navigation__list, .footer-navigation__list {
     margin-left: 43px;
-}
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -223,7 +222,7 @@
 		height: 34px;
 	}
 	.header__container {
-		width: 96vw;
+		width: 94vw;
 		height: 34px;
 		margin: 0 20px;
 		justify-content: space-between;
@@ -448,11 +447,11 @@
 		font-size: 22px;
 	}
 	.peek-friend__content-text {
-		width: 600px;
+		width: 585px;
 		margin-top: 11px;
 		margin-left: 20px;
 		&.bold {
-			width: 600px;
+			width: 585px;
 			margin-top: 19px;
 		}
 	}
@@ -482,9 +481,10 @@
 	.testimonials {
 		margin-bottom: 80px;
 		&::after {
-			transform: scale(50%);
-			right: -69px;
-			bottom: -167px;
+			content: url('../../../../assets/images/testimonials-leaf_foto2.png');
+			transform: scale(100%);
+			right: 0;
+			bottom: -240px;
 			overflow: hidden;
 		}
 	}
@@ -526,7 +526,7 @@
     height: 282px;
   }
 	.footer__container {
-    width: 97vw;
+    width: 94vw;
 		margin: 0 20px;
   }
 	.footer__info {
@@ -554,17 +554,17 @@
 		}
 	}
 	.footer__navigation {
-		width: 80px;
+		width: 30px;
     .footer-navigation__list {
       left: 0;
     }
-		.navigation__list .navigation__list-item:nth-child(4) {
-			margin-right: 0;
-		}
 	}
 	.navigation__list-item {
-		&:nth-child(even) {
+		&:nth-child(2) {
 			margin-left: 37px;
+			margin-right: 37px;
+		}
+		&:nth-child(3) {
 			margin-right: 37px;
 		}
 	}
@@ -572,8 +572,8 @@
     display: none;
 	}
 	.footer__copyright {
-    margin-left: 0;
-    margin-top: 178px;
+    margin-left: 11px;
+    margin-top: 177px;
   } 
 }
 
@@ -585,7 +585,7 @@
     background-position-x: -58px;
 	}
 	.watch__content {
-		width: 98vw;
+		width: 96vw;
 		margin-top: 48px;
 		margin-left: 0;
 		flex-direction: row-reverse;
@@ -609,6 +609,11 @@
 			margin-bottom: -47px;
 		}
 	}
+	.pets__card-image {
+		&:hover {
+			transform: scale(1);
+		}
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -629,10 +634,16 @@
 }
 
 @media screen and (max-width: 625px) {
+	.header__container {
+    margin: 0 10px;
+  }
 	.container {
 		&.peek-friend__container {
 			width: calc(100vw - 20px);
 			margin: 0 10px;
+		}
+		&.testimonials__container {
+			width: 93vw;
 		}
 	}
 	.watch__content {
@@ -675,7 +686,7 @@
 	}
 	.backstage__content {
     width: 300px;
-}
+  }
 	.backstage__content-title {
 		font-size: 24px;
 	}
@@ -794,7 +805,7 @@
     height: 334px;
   }
 	.footer__container {
-    width: 300px;
+    width: 302px;
 		margin: 0 auto;
     flex-direction: column;
     justify-content: center;
@@ -829,18 +840,14 @@
       left: 11px;
       bottom: -48px;
     }
-		.navigation__list .navigation__list-item:nth-child(4) {
-			margin-right: 0;
-		}
 	}
 	.navigation__list-item {
 		&:nth-child(2) {
 			margin-left: 30px;
 			margin-right: 30px;
 		}
-		&:nth-child(4) {
-			margin-left: 30px;
-			margin-right: 0;
+		&:nth-child(3) {
+			margin-right: 30px;
 		}
 	}
 	.footer__social-list {
@@ -878,8 +885,8 @@
     height: 34px;
   }
 	.header__container {
-		width: 93vw;
-		margin: 0 10px;
+		width: 91vw;
+    margin: 0 auto;
 	}
 	.burger__menu {
 		margin-top: 0;
@@ -909,6 +916,15 @@
 }
 
 @media screen and (max-width: 420px) {
+	.container {
+		width: 93vw;
+    margin: 0;
+	}
+	.link {
+		&.watch__content-link {
+			margin-left: 0;
+		}
+	}
 	.backstage {
 		&::after {
 			content: url('../../../../assets/images/backstage-flower_foto2.png');
