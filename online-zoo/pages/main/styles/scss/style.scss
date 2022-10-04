@@ -1,23 +1,4 @@
-$font-family: 'Roboto', serif;
-$bold-font-weight: 700;
-$medium-font-weight: 500;
-$normal-font-weight: 400;
-$thin-font-weight: 300;
-$light-font-weight: 100;
-
-$white-color: #ffffff;
-$black-color: #000000;
-$yellow-color: #FFEE2E;
-$orange-color: #E47209;
-$orange-color-title: #FE9013;
-$green-color: #4B9200;
-$red-color: #D31414;
-$black-blue-color: #333B41;
-$light-gray-color: #F1F3F2;
-$gray-smoky-color: #BDBDBD;
-$gray-color: #767474;
-$orange-gradient-color-button: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-$orange-gradient-color-border: linear-gradient(to right bottom, #fa6f32, #fe9013);
+@import 'variables.scss';
 
 * {
 	margin: 0;
@@ -47,7 +28,8 @@ a {
 	align-items: center;
 }
 
-.logo {
+.logo,
+.footer__logo {
 	width: 82px;
   height: 52px;
 	display: flex;
@@ -61,7 +43,8 @@ a {
 	}
 }
 
-.logo__title {
+.logo__title,
+.footer-logo__title {
 	width: 72.49px;
   height: 44.91px;
 	display: flex;
@@ -74,14 +57,15 @@ a {
   text-align: center;
   color: $white-color;
 	&::before {
-		content: url('../../assets/icons/logo-bamboo.svg');
+		content: url('../../../../assets/icons/logo-bamboo.svg');
 		position: relative;
 		top: 20px;
 		left: 17px;
 	}
 }
 
-.navigation__list {
+.navigation__list,
+.footer-navigation__list {
 	margin-left: 63px;
 	display: flex;
 	justify-content: center;
@@ -95,9 +79,17 @@ a {
 	line-height: 140%;
 }
 
-.navigation__list-item:nth-child(even) {
-	margin-left: 58px;
-	margin-right: 58px;
+.navigation__list-item {
+	&:nth-child(2) {
+		margin-left: 58px;
+		margin-right: 58px;
+	}
+	&:nth-child(3) {
+		margin-right: 58px;
+	}
+	&:nth-child(5) {
+		margin-left: 58px;
+	}
 }
 
 .navigation__list-link {
@@ -146,9 +138,13 @@ a {
 	}
 }
 
+.burger__menu {
+	display: none;
+}
+
 .watch {
 	height: 700px;
-	background-image: url('../../assets/images/main-panda.png');
+	background-image: url('../../../../assets/images/main-panda.png');
 	background-size: cover;
 	background-position-y: bottom;
 }
@@ -171,6 +167,17 @@ a {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
+}
+
+.watch__content-title {
+	font-family: $font-family;
+  font-style: normal;
+  font-weight: $bold-font-weight;
+  font-size: 106.496px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white-color;
 	position: relative;
 	z-index: 5;
 	&::before {
@@ -184,17 +191,6 @@ a {
 		top: -74px;
     left: -75px
 	}
-}
-
-.watch__content-title {
-	font-family: $font-family;
-  font-style: normal;
-  font-weight: $bold-font-weight;
-  font-size: 106.496px;
-  line-height: 75%;
-  text-align: center;
-  text-transform: uppercase;
-  color: $white-color;
 	.watch__content-color {
 		color: $yellow-color;
 	}
@@ -245,7 +241,7 @@ a {
 		margin-top: 140px;
 		position: relative;
 		&::after {
-			content: url('../../assets/images/backstage-flower_foto.png');
+			content: url('../../../../assets/images/backstage-flower_foto.png');
 			position: absolute;
 			top: -128px;
 			right: 0;
@@ -257,7 +253,7 @@ a {
 	height: 403px;
 	margin-left: -1px;
 	margin-top: -5px;
-	background-image: url('../../assets/images/backstage-bamboo-cap.png');
+	background-image: url('../../../../assets/images/backstage-bamboo-cap.png');
 }
 
 .backstage__content {
@@ -305,13 +301,13 @@ a {
 	align-items: center;
 	position: relative;
 	&::before {
-		content: url('../../assets/images/pets-palm_foto.png');
+		content: url('../../../../assets/images/pets-palm_foto.png');
 		position: absolute;
 		left: 0;
 		bottom: -4px;
 	}
 	&::after {
-		content: url('../../assets/images/pets-strelitzia1.png');
+		content: url('../../../../assets/images/pets-strelitzia1.png');
 		position: absolute;
 		right: 0;
 		bottom: -4px;
@@ -521,14 +517,14 @@ a {
 	margin-left: 30px;
 	margin-right: 31px;
 	margin-top: -90px;
-	background-image: url('../../assets/icons/peek-friend-arrow.svg');
+	background-image: url('../../../../assets/icons/peek-friend-arrow.svg');
 }
 
 .testimonials {
 	margin-bottom: 180px;
 	position: relative;
 	&::after {
-		content: url('../../assets/images/testimonials-leaf_foto.png');
+		content: url('../../../../assets/images/testimonials-leaf_foto.png');
 		height: 295px;
 		position: absolute;
 		z-index: -1;
@@ -673,7 +669,7 @@ a {
 }
 
 .footer__navigation {
-	width: 395px;
+	width: 460px;
 	align-self: flex-end;
 	.navigation__list {
 		justify-content: start;

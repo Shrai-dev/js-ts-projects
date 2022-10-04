@@ -1,23 +1,4 @@
-$font-family: 'Roboto', serif;
-$bold-font-weight: 700;
-$medium-font-weight: 500;
-$normal-font-weight: 400;
-$thin-font-weight: 300;
-$light-font-weight: 100;
-
-$white-color: #ffffff;
-$black-color: #000000;
-$yellow-color: #FFEE2E;
-$orange-color: #E47209;
-$light-orange-color: #FE9013;
-$green-color: #4B9200;
-$red-color: #D31414;
-$black-blue-color: #333B41;
-$light-gray-color: #F1F3F2;
-$gray-smoky-color: #BDBDBD;
-$gray-color: #767474;
-$orange-gradient-color-button: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-$orange-gradient-color-border: linear-gradient(to right bottom, #fa6f32, #fe9013);
+@import 'variables.scss';
 
 * {
 	margin: 0;
@@ -47,7 +28,8 @@ a {
 	align-items: center;
 }
 
-.logo {
+.logo,
+.footer__logo  {
 	width: 82px;
   height: 52px;
 	display: flex;
@@ -61,7 +43,8 @@ a {
 	}
 }
 
-.logo__title {
+.logo__title,
+.footer-logo__title {
 	width: 72.49px;
   height: 44.91px;
 	display: flex;
@@ -74,14 +57,15 @@ a {
   text-align: center;
   color: $white-color;
 	&::before {
-		content: url('../../assets/icons/logo-bamboo.svg');
+		content: url('../../../../assets/icons/logo-bamboo.svg');
 		position: relative;
 		top: 20px;
 		left: 17px;
 	}
 }
 
-.navigation__list {
+.navigation__list,
+.footer-navigation__list {
 	margin-left: 63px;
 	display: flex;
 	justify-content: center;
@@ -95,9 +79,17 @@ a {
 	line-height: 140%;
 }
 
-.navigation__list-item:nth-child(even) {
-	margin-left: 58px;
-	margin-right: 58px;
+.navigation__list-item {
+	&:nth-child(2) {
+		margin-left: 58px;
+		margin-right: 58px;
+	}
+	&:nth-child(3) {
+		margin-right: 58px;
+	}
+	&:nth-child(5) {
+		margin-left: 58px;
+	}
 }
 
 .navigation__list-link {
@@ -148,7 +140,7 @@ a {
 
 .favorite-animal {
 	height: 386px;
-	background-image: url(../../assets/images/main-panda.png);
+	background-image: url('../../../../assets/images/main-panda.png');
 	background-size: cover;
 	background-position-y: -198px;
 }
@@ -271,7 +263,7 @@ a {
 	height: 14px;
 	margin-top: 22px;
 	margin-left: -11px;
-	background-image: url('../../assets/icons/x_icon.svg');
+	background-image: url('../../../../assets/icons/x_icon.svg');
 }
 
 .animal__content-image {
@@ -573,7 +565,7 @@ a {
 }
 
 .footer__navigation {
-	width: 395px;
+	width: 460px;
 	align-self: flex-end;
 	.navigation__list {
 		justify-content: start;

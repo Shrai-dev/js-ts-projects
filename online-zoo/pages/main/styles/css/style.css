@@ -21,7 +21,8 @@ a {
   display: flex;
   align-items: center; }
 
-.logo {
+.logo,
+.footer__logo {
   width: 82px;
   height: 52px;
   display: flex;
@@ -29,11 +30,13 @@ a {
   align-items: center;
   border: 1.18841px solid #ffffff;
   border-radius: 2px; }
-  .logo:hover {
+  .logo:hover,
+  .footer__logo:hover {
     cursor: pointer;
     transform: scale(1.05); }
 
-.logo__title {
+.logo__title,
+.footer-logo__title {
   width: 72.49px;
   height: 44.91px;
   display: flex;
@@ -45,13 +48,15 @@ a {
   line-height: 121%;
   text-align: center;
   color: #ffffff; }
-  .logo__title::before {
-    content: url("../../assets/icons/logo-bamboo.svg");
+  .logo__title::before,
+  .footer-logo__title::before {
+    content: url("../../../../assets/icons/logo-bamboo.svg");
     position: relative;
     top: 20px;
     left: 17px; }
 
-.navigation__list {
+.navigation__list,
+.footer-navigation__list {
   margin-left: 63px;
   display: flex;
   justify-content: center; }
@@ -63,9 +68,13 @@ a {
   font-size: 16px;
   line-height: 140%; }
 
-.navigation__list-item:nth-child(even) {
+.navigation__list-item:nth-child(2) {
   margin-left: 58px;
   margin-right: 58px; }
+.navigation__list-item:nth-child(3) {
+  margin-right: 58px; }
+.navigation__list-item:nth-child(5) {
+  margin-left: 58px; }
 
 .navigation__list-link {
   color: #ffffff; }
@@ -106,9 +115,12 @@ a {
     -webkit-text-fill-color: transparent;
     font-weight: 500; }
 
+.burger__menu {
+  display: none; }
+
 .watch {
   height: 700px;
-  background-image: url("../../assets/images/main-panda.png");
+  background-image: url("../../../../assets/images/main-panda.png");
   background-size: cover;
   background-position-y: bottom; }
 
@@ -127,19 +139,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  z-index: 5; }
-  .watch__content::before {
-    content: '';
-    width: 465px;
-    height: 465px;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-    top: -74px;
-    left: -75px; }
+  align-items: center; }
 
 .watch__content-title {
   font-family: "Roboto", serif;
@@ -149,7 +149,19 @@ a {
   line-height: 75%;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff; }
+  color: #ffffff;
+  position: relative;
+  z-index: 5; }
+  .watch__content-title::before {
+    content: '';
+    width: 465px;
+    height: 465px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: -74px;
+    left: -75px; }
   .watch__content-title .watch__content-color {
     color: #FFEE2E; }
 
@@ -191,7 +203,7 @@ a {
   margin-top: 140px;
   position: relative; }
   .backstage::after {
-    content: url("../../assets/images/backstage-flower_foto.png");
+    content: url("../../../../assets/images/backstage-flower_foto.png");
     position: absolute;
     top: -128px;
     right: 0; }
@@ -201,7 +213,7 @@ a {
   height: 403px;
   margin-left: -1px;
   margin-top: -5px;
-  background-image: url("../../assets/images/backstage-bamboo-cap.png"); }
+  background-image: url("../../../../assets/images/backstage-bamboo-cap.png"); }
 
 .backstage__content {
   width: 465px;
@@ -243,12 +255,12 @@ a {
   align-items: center;
   position: relative; }
   .pets::before {
-    content: url("../../assets/images/pets-palm_foto.png");
+    content: url("../../../../assets/images/pets-palm_foto.png");
     position: absolute;
     left: 0;
     bottom: -4px; }
   .pets::after {
-    content: url("../../assets/images/pets-strelitzia1.png");
+    content: url("../../../../assets/images/pets-strelitzia1.png");
     position: absolute;
     right: 0;
     bottom: -4px; }
@@ -429,13 +441,13 @@ a {
   margin-left: 30px;
   margin-right: 31px;
   margin-top: -90px;
-  background-image: url("../../assets/icons/peek-friend-arrow.svg"); }
+  background-image: url("../../../../assets/icons/peek-friend-arrow.svg"); }
 
 .testimonials {
   margin-bottom: 180px;
   position: relative; }
   .testimonials::after {
-    content: url("../../assets/images/testimonials-leaf_foto.png");
+    content: url("../../../../assets/images/testimonials-leaf_foto.png");
     height: 295px;
     position: absolute;
     z-index: -1;
@@ -554,7 +566,7 @@ a {
   margin-right: 12px; }
 
 .footer__navigation {
-  width: 395px;
+  width: 460px;
   align-self: flex-end; }
   .footer__navigation .navigation__list {
     justify-content: start;

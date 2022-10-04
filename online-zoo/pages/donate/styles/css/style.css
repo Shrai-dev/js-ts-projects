@@ -21,7 +21,8 @@ a {
   display: flex;
   align-items: center; }
 
-.logo {
+.logo,
+.footer__logo {
   width: 82px;
   height: 52px;
   display: flex;
@@ -29,11 +30,13 @@ a {
   align-items: center;
   border: 1.18841px solid #ffffff;
   border-radius: 2px; }
-  .logo:hover {
+  .logo:hover,
+  .footer__logo:hover {
     cursor: pointer;
     transform: scale(1.05); }
 
-.logo__title {
+.logo__title,
+.footer-logo__title {
   width: 72.49px;
   height: 44.91px;
   display: flex;
@@ -45,13 +48,15 @@ a {
   line-height: 121%;
   text-align: center;
   color: #ffffff; }
-  .logo__title::before {
-    content: url("../../assets/icons/logo-bamboo.svg");
+  .logo__title::before,
+  .footer-logo__title::before {
+    content: url("../../../../assets/icons/logo-bamboo.svg");
     position: relative;
     top: 20px;
     left: 17px; }
 
-.navigation__list {
+.navigation__list,
+.footer-navigation__list {
   margin-left: 63px;
   display: flex;
   justify-content: center; }
@@ -63,9 +68,13 @@ a {
   font-size: 16px;
   line-height: 140%; }
 
-.navigation__list-item:nth-child(even) {
+.navigation__list-item:nth-child(2) {
   margin-left: 58px;
   margin-right: 58px; }
+.navigation__list-item:nth-child(3) {
+  margin-right: 58px; }
+.navigation__list-item:nth-child(5) {
+  margin-left: 58px; }
 
 .navigation__list-link {
   color: #ffffff; }
@@ -108,7 +117,7 @@ a {
 
 .favorite-animal {
   height: 386px;
-  background-image: url(../../assets/images/main-panda.png);
+  background-image: url("../../../../assets/images/main-panda.png");
   background-size: cover;
   background-position-y: -198px; }
 
@@ -218,7 +227,7 @@ a {
   height: 14px;
   margin-top: 22px;
   margin-left: -11px;
-  background-image: url("../../assets/icons/x_icon.svg"); }
+  background-image: url("../../../../assets/icons/x_icon.svg"); }
 
 .animal__content-image {
   margin-left: 64px; }
@@ -463,7 +472,7 @@ a {
   margin-right: 12px; }
 
 .footer__navigation {
-  width: 395px;
+  width: 460px;
   align-self: flex-end; }
   .footer__navigation .navigation__list {
     justify-content: start;
