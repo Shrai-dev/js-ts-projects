@@ -136,6 +136,9 @@
 		width: 940px;
 		margin: 0 30px;
 	}
+	.navigation__list {
+		margin-left: 62px;
+	}
 	.navigation__list-item {
 		&:nth-child(2) {
 			margin-left: 48px;
@@ -143,6 +146,9 @@
 		}
 		&:nth-child(3) {
 			margin-right: 48px;
+		}
+		&:nth-child(5) {
+			margin-left: 50px;
 		}
 	}
 	.copyright {
@@ -163,7 +169,7 @@
 	.footer__info {
     width: 298px;
   }
-	.navigation__list, .footer-navigation__list {
+	.footer-navigation__list {
     margin-left: 43px;
   }
 }
@@ -260,7 +266,7 @@
 	}
 	.burger__menu {
 		margin-top: -4px;
-		margin-right: 14px;
+		margin-right: 2px;
     display: block;
     height: 10px;
     width: 18px;
@@ -443,13 +449,13 @@
   }
 	.peek-friend__content-subtitle {
 		margin-top: 22px;
-		margin-left: 20px;
+		margin-left: 6px;
 		font-size: 22px;
 	}
 	.peek-friend__content-text {
 		width: 585px;
 		margin-top: 11px;
-		margin-left: 20px;
+		margin-left: 6px;
 		&.bold {
 			width: 585px;
 			margin-top: 19px;
@@ -460,7 +466,7 @@
   }
 	.peek-friend__flow {
 		margin-top: 19px;
-		padding: 0 32px 0 20px;
+		padding: 0 20px 0 8px;
 		justify-content: space-between;
     position: relative;
   }
@@ -471,11 +477,11 @@
 		background-image: url('../../../../assets/icons/peek-friend-arrow-green.svg');
 		&.first-arrow {
 			top: 74px;
-      left: 127px;
+      left: 114px;
 		}
 		&.second-arrow {
 			top: 73px;
-      right: 155px;
+      right: 142px;
 		}
 	}
 	.testimonials {
@@ -535,9 +541,9 @@
 	.footer__social-list {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: -10px;
 		margin-top: 12px;
-		margin-right: 9px;
+		// margin-right: 9px;
 	}
 	.footer__social-item {
 		&:nth-child(2) {
@@ -572,7 +578,7 @@
     display: none;
 	}
 	.footer__copyright {
-    margin-left: 11px;
+    margin-left: 50px;
     margin-top: 177px;
   } 
 }
@@ -631,6 +637,12 @@
 			margin-left: 5px;
 		}
 	}
+}
+
+@media screen and (max-width: 639px) {
+	.footer__copyright {
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 625px) {
@@ -934,6 +946,9 @@
 }
 
 @media screen and (max-width: 320px) {
+	.container {
+		margin: 0 0 0 9px;
+	}
 	.watch {
     height: 187px;
     background-size: auto 190px;

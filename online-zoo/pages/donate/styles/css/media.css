@@ -148,7 +148,7 @@
 
   .burger__menu {
     margin-top: -4px;
-    margin-right: 14px;
+    margin-right: 2px;
     display: block;
     height: 10px;
     width: 18px;
@@ -285,7 +285,7 @@
   .footer__social-list {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -10px;
     margin-top: 12px; }
 
   .footer__social-item:nth-child(2) {
@@ -564,7 +564,7 @@
 
   .burger__menu {
     margin-top: 0;
-    margin-right: -2px; }
+    margin-right: -10px; }
 
   .peak-friend__desc {
     width: 300px; }
