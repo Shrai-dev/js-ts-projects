@@ -92,7 +92,7 @@
     margin: 0 auto; }
 
   .peak-friend__title {
-    width: 778px;
+    width: 760px;
     margin-top: 45px;
     align-self: flex-start; }
 
@@ -286,8 +286,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 12px;
-    margin-right: -9px; }
+    margin-top: 12px; }
 
   .footer__social-item:nth-child(2) {
     margin-top: 20px;
@@ -317,7 +316,7 @@
     margin-top: 177px; } }
 @media screen and (max-width: 800px) {
   .peak-friend__title {
-    width: 600px;
+    width: 596px;
     margin-top: 30px;
     font-size: 24px;
     line-height: 120%; }
@@ -363,6 +362,9 @@
   .peak-friend {
     height: 1332px; }
 
+  .peak-friend__desc {
+    width: 606px; }
+
   .peek-friend__content-title {
     margin-left: 0px; }
 
@@ -383,9 +385,21 @@
   .footer__copyright {
     margin-left: 51px; } }
 @media screen and (max-width: 639px) {
+  .header__container {
+    margin: 0 16px; }
+
+  .peak-friend__desc {
+    width: 450px; }
+
   .pay-slider {
-    transform: scale(0.5); } }
+    transform: scale(0.5); }
+
+  .footer__copyright {
+    margin-left: 30px; } }
 @media screen and (max-width: 625px) {
+  .header__container {
+    margin: 0 7px; }
+
   .favorite-animal {
     height: 187px;
     background-size: auto 379px;
@@ -398,7 +412,7 @@
     width: 100%; }
 
   .peak-friend__desc {
-    width: 100%;
+    width: 97%;
     margin-top: 20px; }
 
   .peak-friend__subtitle {
@@ -418,7 +432,8 @@
   .animal__content {
     width: 91vw;
     margin-top: 10px;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-left: 0; }
 
   .animal__content-wrapper {
     width: 90px;
@@ -445,6 +460,23 @@
   .animal__content-icon {
     width: 160px;
     height: 139px; }
+
+  .animal__content-wrapper {
+    margin-right: 15px; }
+
+  .animal__content-days {
+    margin-top: 42px; }
+
+  .animal__widget-title {
+    margin-top: 8px;
+    margin-left: 1px; }
+
+  .pay-slider {
+    margin-top: -18px;
+    margin-left: -10px; }
+
+  .animal__donate {
+    margin-top: 6px; }
 
   .animal__widget-row {
     margin-left: -100px; }
@@ -481,6 +513,9 @@
     .footer-logo__title::before {
       top: -4px;
       left: 83px; }
+
+  .link.footer__link {
+    margin-top: 78px; }
 
   .footer__navigation {
     width: 0; }
@@ -524,12 +559,15 @@
     height: 34px; }
 
   .header__container {
-    width: 93vw;
-    margin: 0 10px; }
+    width: 91vw;
+    margin: 0 8px; }
 
   .burger__menu {
     margin-top: 0;
     margin-right: -2px; }
+
+  .peak-friend__desc {
+    width: 300px; }
 
   .peak-friend__subtitle {
     margin-top: 24px; }
@@ -570,10 +608,7 @@
     margin-left: -140px; }
 
   .animal__donate-icon {
-    left: 66vw; }
-
-  .link.footer__link {
-    margin-top: 78px; } }
+    left: 66vw; } }
 @media screen and (max-width: 320px) {
   .animal__donate-icon {
     left: 69vw; }
