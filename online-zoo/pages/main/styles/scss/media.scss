@@ -439,7 +439,7 @@
 		height: 780px;
   }
 	.peek-friend__content {
-		width: 96vw;
+		width: 600px;
 		height: 741px;
 		margin-top: -1px;
 	}
@@ -543,7 +543,6 @@
 		top: 0;
 		right: -10px;
 		margin-top: 12px;
-		// margin-right: 9px;
 	}
 	.footer__social-item {
 		&:nth-child(2) {
@@ -640,6 +639,13 @@
 }
 
 @media screen and (max-width: 639px) {
+	.container {
+    &.peek-friend__container {
+    	width: 300px;
+    	margin: 0 10px;
+    }
+	}
+	
 	.footer__copyright {
     margin-left: 30px;
   }
@@ -650,10 +656,6 @@
     margin: 0 10px;
   }
 	.container {
-		&.peek-friend__container {
-			width: calc(100vw - 20px);
-			margin: 0 10px;
-		}
 		&.testimonials__container {
 			width: 93vw;
 		}
