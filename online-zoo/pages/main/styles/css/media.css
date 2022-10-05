@@ -550,6 +550,12 @@
   .pets__card-image:hover {
     transform: scale(1); } }
 @media screen and (max-width: 640px) {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 6; }
+
   .watch {
     height: 339px;
     background-size: auto 376px;
