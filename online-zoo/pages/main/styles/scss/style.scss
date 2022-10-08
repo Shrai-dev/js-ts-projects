@@ -365,14 +365,40 @@ a {
 	border: 2px solid transparent;
   background:  linear-gradient($white-color 0 0) padding-box, $orange-gradient-color-border border-box;
   border-radius: 5px;
+	overflow: hidden;
+	&:hover .pets__card-image {
+		transform: scale(1.112);
+		transition: all 1s;
+		filter: grayscale(1);
+		cursor: pointer;
+	}
+	&:hover .pets__card-title {
+		position: absolute;
+    transform: translateY(-150px);
+    z-index: 4;
+    color: $white-color;
+    transition: all 1s;
+	}
+	&:hover .pets__card-desc {
+		position: absolute;
+    transform: translateY(-125px);
+    z-index: 4;
+    color: $white-color;
+    transition: all 1s;
+	}
+	&:hover .pets__card-icon {
+		margin-top: 5px;
+	}
+}
+
+.image__wrapper {
+	overflow: hidden;
 }
 
 .pets__card-image {
 	width: 362px;
 	height: 364px;
-	&:hover {
-		transform: scale(1.112);
-	}
+	object-fit: cover;
 }
 
 .pets__card-content {

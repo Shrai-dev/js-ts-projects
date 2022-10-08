@@ -306,13 +306,35 @@ a {
   height: 426px;
   border: 2px solid transparent;
   background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(to right bottom, #fa6f32, #fe9013) border-box;
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: hidden; }
+  .pets__card:hover .pets__card-image {
+    transform: scale(1.112);
+    transition: all 1s;
+    filter: grayscale(1);
+    cursor: pointer; }
+  .pets__card:hover .pets__card-title {
+    position: absolute;
+    transform: translateY(-150px);
+    z-index: 4;
+    color: #ffffff;
+    transition: all 1s; }
+  .pets__card:hover .pets__card-desc {
+    position: absolute;
+    transform: translateY(-125px);
+    z-index: 4;
+    color: #ffffff;
+    transition: all 1s; }
+  .pets__card:hover .pets__card-icon {
+    margin-top: 5px; }
+
+.image__wrapper {
+  overflow: hidden; }
 
 .pets__card-image {
   width: 362px;
-  height: 364px; }
-  .pets__card-image:hover {
-    transform: scale(1.112); }
+  height: 364px;
+  object-fit: cover; }
 
 .pets__card-content {
   position: relative;
