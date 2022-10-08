@@ -142,6 +142,41 @@
       top: 8px;
       left: 13px; }
 
+  .header__logo-burger {
+    width: 65.6px;
+    height: 41.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.18841px solid #FE9013;
+    border-radius: 2px;
+    position: fixed;
+    left: 11px;
+    top: 10px;
+    z-index: 16; }
+    .header__logo-burger .logo__title {
+      width: 65.6px;
+      height: 41.6px;
+      display: flex;
+      margin-left: 0;
+      font-family: "Roboto", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15.2116px;
+      line-height: 120%;
+      text-align: center;
+      color: #FE9013;
+      position: fixed;
+      left: 6px;
+      top: 12px;
+      z-index: 16; }
+      .header__logo-burger .logo__title::before {
+        content: url("../../../../assets/icons/logo-bamboo-orange.svg");
+        transform: scale(1);
+        position: relative;
+        top: 17px;
+        left: 13px; }
+
   .navigation__list,
   .copyright {
     display: none; }
@@ -150,8 +185,8 @@
     margin-top: -4px;
     margin-right: 2px;
     display: block;
-    height: 10px;
-    width: 18px;
+    height: 12px;
+    width: 20px;
     z-index: 15;
     position: relative;
     cursor: pointer; }
@@ -184,36 +219,44 @@
   .burger__menu.active span {
     transform: scale(0) translate(0px, -50%);
     transition-duration: 0.25s;
-    background-color: #ffffff; }
+    background-color: #000000; }
 
   .burger__menu.active::before {
     top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -60%);
     transition-duration: 0.25s;
-    background-color: #ffffff; }
+    background-color: #000000; }
 
   .burger__menu.active::after {
     bottom: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
+    transform: rotate(45deg) translate(0px, 60%);
     transition-duration: 0.25s;
-    background-color: #ffffff; }
+    background-color: #000000; }
 
   .show {
-    width: 620px;
-    height: 100vh;
+    width: 100vw;
+    height: 329px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
     position: absolute;
     z-index: 15;
     top: 0;
     right: 0;
     background-color: #ffffff;
-    padding: 134px 0 463px 127px; }
+    padding-top: 60px;
+    padding-left: 10px; }
+    .show .navigation__list-item {
+      margin: 0; }
+      .show .navigation__list-item:nth-child(even) {
+        margin: 15px 0; }
+    .show .navigation__list-link {
+      color: #000000; }
+    .show .copyright-item {
+      display: block; }
 
-  .show .header__nav-item {
-    margin: 0; }
+  .hide {
+    display: none; }
 
   .favorite-animal {
     height: 336px;
