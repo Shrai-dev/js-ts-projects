@@ -92,6 +92,10 @@ a {
 	}
 }
 
+.copyright-item {
+	display: none;
+}
+
 .navigation__list-link {
 	color: $white-color;
 	&:hover {
@@ -431,7 +435,7 @@ a {
   font-size: 48px;
   line-height: 120%;
   text-align: center;
-  color: $orange-color-title;
+  color: $light-orange-color;
 }
 
 .peek-friend__content-subtitle {
@@ -465,7 +469,7 @@ a {
 }
 
 .peek-friend__content-link {
-	border-bottom: 1px solid $orange-color-title;
+	border-bottom: 1px solid $light-orange-color;
 	color: $black-blue-color;
 }
 
@@ -764,4 +768,15 @@ a {
     border-bottom: 1px solid $green-color;
 		color: $green-color;
 	}
+}
+
+.overlay {
+  background-color: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100vw;
+  cursor: pointer;
 }

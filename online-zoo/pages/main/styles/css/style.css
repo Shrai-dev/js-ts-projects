@@ -76,6 +76,9 @@ a {
 .navigation__list-item:nth-child(5) {
   margin-left: 58px; }
 
+.copyright-item {
+  display: none; }
+
 .navigation__list-link {
   color: #ffffff; }
   .navigation__list-link:hover {
@@ -648,5 +651,15 @@ a {
   .footer__copyright-link:hover {
     border-bottom: 1px solid #4B9200;
     color: #4B9200; }
+
+.overlay {
+  background-color: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100vw;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
