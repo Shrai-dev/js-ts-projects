@@ -293,13 +293,16 @@ a {
     margin-top: -3px; }
 
 .pets__slider-container {
-  margin-left: -2px; }
+  margin-left: -2px;
+  overflow: hidden;
+  height: 872px; }
 
 .pets__cards {
   width: 1160px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 30px; }
+  gap: 20px 30px;
+  position: relative; }
 
 .pets__card {
   width: 366px;

@@ -26,6 +26,8 @@
   .container {
     width: 940px;
     margin: 0; }
+    .container.backstage__container {
+      margin-left: 30px; }
     .container.testimonials__container {
       margin: 0 auto; }
 
@@ -36,8 +38,12 @@
     margin-top: 139px;
     position: relative; }
 
+  .pets__slider-container {
+    height: 800px; }
+
   .pets__button-arrow {
-    position: absolute; }
+    position: absolute;
+    z-index: 5; }
 
   .pets__cards {
     width: 943px;
@@ -206,6 +212,8 @@
   .container {
     width: 96vw;
     margin: 0 auto; }
+    .container.backstage__container {
+      margin-left: 0; }
     .container.peek-friend__container {
       width: 100vw;
       height: 781px;
