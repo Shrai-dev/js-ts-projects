@@ -128,6 +128,11 @@
 	.slider__card {
 		width: 294px;
 	}
+	.popup__wrapper {
+		.slider__card-review {
+			width: 237px;
+		}
+	}
 	.slider__card-review {
 		width: 255px;
 		margin-top: 14px;
@@ -576,6 +581,11 @@
 		}
 		&:nth-child(3) {
 			margin-right: 0;
+		}
+	}
+	.popup__wrapper {
+		.slider__card-review {
+			height: 391px;
 		}
 	}
 	.slider__card-review {

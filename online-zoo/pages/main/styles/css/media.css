@@ -114,6 +114,9 @@
   .slider__card {
     width: 294px; }
 
+  .popup__wrapper .slider__card-review {
+    width: 237px; }
+
   .slider__card-review {
     width: 255px;
     margin-top: 14px; } }
@@ -517,6 +520,9 @@
       margin: 15px 0; }
     .slider__card:nth-child(3) {
       margin-right: 0; }
+
+  .popup__wrapper .slider__card-review {
+    height: 391px; }
 
   .slider__card-review {
     width: 553px;

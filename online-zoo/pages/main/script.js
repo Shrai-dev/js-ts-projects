@@ -357,7 +357,7 @@ function createTestimonialsCards(list) {
 function createTestimonials(list) {
 	let str = '';
 	for (let i = 0; i < list.length; i++) {
-		str += `<div class="slider__card">
+		str += `<div class="slider__card" data-id="${list[i].id}">
 	          	<div class="slider__card-inner">
 	          		<img class="slider__card-image" src="${list[i].icon}" alt="user-icon">
 	          		<div class="slider__card-info">
@@ -376,3 +376,51 @@ function createTestimonials(list) {
 }
 
 createTestimonialsCards(testimonialsArray);
+
+const testimonialsCards = document.querySelectorAll('.slider__card');
+const testimonialsCardsArray = Array.from(testimonialsCards);
+const popup = document.querySelector('.popup');
+const closeBtn = document.querySelector('.popup__button');
+const testimonialInfoContainer = document.querySelector('.popup__wrapper');
+
+function createPopup(id) {
+	const testimonialInfo = `
+    <div class="slider__card-inner">
+    	<img class="slider__card-image" src="${
+				testimonialsArray[id - 1].icon
+			}" alt="user-icon">
+    	<div class="slider__card-info">
+    		<h5 class="slider__card-title">
+    		${testimonialsArray[id - 1].name}
+    		</h5>
+    		<p class="slider__card-location">
+    			${testimonialsArray[id - 1].location} • ${
+		testimonialsArray[id - 1].wasOnline
+	}
+    		</p>
+    	</div>
+    </div>
+    <p class="slider__card-review">${testimonialsArray[id - 1].feedback}</p>
+  `;
+	testimonialInfoContainer.innerHTML = testimonialInfo;
+}
+
+testimonialsCardsArray.forEach((elem) =>
+	elem.addEventListener('click', (event) => {
+		let testimonialId =
+			event.target.parentNode.dataset.id || event.target.dataset.id;
+		popup.classList.add('popup__show');
+		document.body.style.overflowY = 'hidden';
+		document.body.prepend(overlay);
+		createPopup(testimonialId);
+	})
+);
+
+closeBtn.addEventListener('click', closePopup);
+overlay.addEventListener('click', closePopup);
+
+function closePopup() {
+	popup.classList.remove('popup__show');
+	overlay.remove();
+	document.body.style.overflowY = 'scroll';
+}
