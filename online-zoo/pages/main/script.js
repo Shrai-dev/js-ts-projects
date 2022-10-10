@@ -57,6 +57,108 @@ const animalArray = [
 	},
 ];
 
+const testimonialsArray = [
+	{
+		id: 1,
+		name: 'Michael John',
+		icon: '../../assets/icons/testimonials-user_icon1.svg',
+		location: 'Local Austria',
+		wasOnline: 'Today',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for",
+	},
+	{
+		id: 2,
+		name: 'Oskar Samborsky',
+		icon: '../../assets/icons/testimonials-icon_user2.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"Online zoo is one of the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for",
+	},
+	{
+		id: 3,
+		name: 'Fredericka Michelin',
+		icon: '../../assets/icons/testimonials-icon_user3.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for",
+	},
+	{
+		id: 4,
+		name: 'Mila Riksha',
+		icon: '../../assets/icons/testimonials-icon_user4.png',
+		location: 'Local Austria',
+		wasOnline: 'Today',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for",
+	},
+	{
+		id: 5,
+		name: 'John Doe',
+		icon: '../../assets/icons/testimonials-icon_user5.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.",
+	},
+	{
+		id: 6,
+		name: 'Karen Maitland',
+		icon: '../../assets/icons/testimonials-icon_user6.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.",
+	},
+	{
+		id: 7,
+		name: 'Sara Jones',
+		icon: '../../assets/icons/testimonials-icon_user7.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love  animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf",
+	},
+	{
+		id: 8,
+		name: 'Alex Barden',
+		icon: '../../assets/icons/testimonials-icon_user8.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.",
+	},
+	{
+		id: 9,
+		name: 'Tina Smith',
+		icon: '../../assets/icons/testimonials-icon_user9.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.",
+	},
+	{
+		id: 10,
+		name: 'Alene Ray',
+		icon: '../../assets/icons/testimonials-user_icon1.svg',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love  animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf",
+	},
+	{
+		id: 11,
+		name: 'Clair Black',
+		icon: '../../assets/icons/testimonials-icon_user4.png',
+		location: 'Local Austria',
+		wasOnline: 'Yesterday',
+		feedback:
+			"My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf the ways to instill a love  animals.The best online zoo I've met. My son delighted very much likes to watch gorillas.<br> The best online zoo I've met. My son delighted very much likes to watch gorillas. Online zoo is one jf",
+	},
+];
+
 const burgerIcon = document.querySelector('.burger__menu');
 const headerLogo = document.querySelector('.logo');
 const navigationMenu = document.querySelector('.navigation__list');
@@ -67,6 +169,13 @@ overlay.classList.add('overlay');
 const petsContainer = document.querySelector('.pets__cards');
 const prevPetsPage = document.querySelector('.prev-btn');
 const nextPetsPage = document.querySelector('.next-btn');
+
+const testimonialsContainer = document.querySelector(
+	'.testimonials__slider-inner'
+);
+const testimonialsRange = document.querySelector(
+	'.testimonials__slider-range[type="range"'
+);
 
 function open() {
 	navigationMenu.classList.remove('hide');
@@ -193,6 +302,7 @@ let petsContainerHeight;
 
 function calculatePetsContainerHeight() {
 	if (document.body.clientWidth > 1400) {
+		// 1400 - 17  -- 17 - scroll width
 		petsContainerHeight = 892;
 	} else if (
 		document.body.clientWidth > 999 &&
@@ -224,3 +334,45 @@ nextPetsPage.addEventListener('click', () => {
 	}px)`;
 	createPets();
 });
+
+function rangeValue() {
+	let newValue = testimonialsRange.value;
+	const target = document.querySelector('.testimonials__slider-inner');
+	if (document.body.clientWidth > 1400) {
+		target.style.left = `calc(0px - ${298 * Math.abs(newValue - 1)}px)`;
+	} else if (
+		document.body.clientWidth > 999 &&
+		document.body.clientWidth < 1401
+	) {
+		target.style.left = `calc(0px - ${319 * Math.abs(newValue - 1)}px)`;
+	}
+}
+
+testimonialsRange.addEventListener('click', rangeValue);
+
+function createTestimonialsCards(list) {
+	testimonialsContainer.innerHTML += createTestimonials(list);
+}
+
+function createTestimonials(list) {
+	let str = '';
+	for (let i = 0; i < list.length; i++) {
+		str += `<div class="slider__card">
+	          	<div class="slider__card-inner">
+	          		<img class="slider__card-image" src="${list[i].icon}" alt="user-icon">
+	          		<div class="slider__card-info">
+	          			<h5 class="slider__card-title">
+	          			${list[i].name}
+	          			</h5>
+	          			<p class="slider__card-location">
+	          				${list[i].location} • ${list[i].wasOnline}
+	          			</p>
+	          		</div>
+	          	</div>
+	          	<p class="slider__card-review">${list[i].feedback}</p>
+	          </div>`;
+	}
+	return str;
+}
+
+createTestimonialsCards(testimonialsArray);
