@@ -34,6 +34,9 @@
 	.container {
     width: 940px;
 		margin: 0;
+		&.backstage__container {
+			margin-left: 30px;
+		}
 		&.testimonials__container {
 			margin: 0 auto;
 		}
@@ -47,8 +50,12 @@
 		margin-top: 139px;
 		position: relative;
 	}
+	.pets__slider-container {
+    height: 800px;
+  }
 	.pets__button-arrow {
 		position: absolute;
+		z-index: 5;
 	}
 	.pets__cards {
 		width: 943px;
@@ -120,6 +127,11 @@
 	}
 	.slider__card {
 		width: 294px;
+	}
+	.popup__wrapper {
+		.slider__card-review {
+			width: 237px;
+		}
 	}
 	.slider__card-review {
 		width: 255px;
@@ -236,6 +248,9 @@
 	.container {
 		width: 96vw;
 		margin: 0 auto;
+		&.backstage__container {
+			margin-left: 0;
+		}
 		&.peek-friend__container {
 			width: 100vw;
 			height: 781px;
@@ -260,6 +275,43 @@
       left: 13px;
 		}
 	}
+	.header__logo-burger {
+		width: 65.6px;
+		height: 41.6px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1.18841px solid $light-orange-color;
+		border-radius: 2px;
+		position: fixed;
+		left: 11px;
+		top: 10px;
+		z-index: 16;
+		.logo__title {
+			width: 65.6px;
+			height: 41.6px;
+			display: flex;
+			margin-left: 0;
+			font-family: $font-family;
+			font-style: normal;
+			font-weight: $normal-font-weight;
+			font-size: 15.2116px;
+			line-height: 120%;
+			text-align: center;
+			color: $light-orange-color;
+			position: fixed;
+			left: 6px;
+			top: 12px;
+			z-index: 16;
+			&::before {
+				content: url('../../../../assets/icons/logo-bamboo-orange.svg');
+				transform: scale(1);
+				position: relative;
+				top: 17px;
+        left: 13px;
+			}
+		}
+	}
 	.navigation__list,
 	.copyright {
 		display: none;
@@ -268,8 +320,8 @@
 		margin-top: -4px;
 		margin-right: 2px;
     display: block;
-    height: 10px;
-    width: 18px;
+    height: 12px;
+    width: 20px;
     z-index: 15;
     position: relative;
     cursor: pointer;
@@ -302,36 +354,48 @@
   .burger__menu.active span {
     transform: scale(0) translate(0px, -50%);
     transition-duration: 0.25s;
-    background-color: $white-color;
+    background-color: $black-color;
   }
   .burger__menu.active::before {
     top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg) translate(0px, -60%);
     transition-duration: 0.25s;
-    background-color: $white-color;
+    background-color: $black-color;
   }
   .burger__menu.active::after {
     bottom: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
+    transform: rotate(45deg) translate(0px, 60%);
     transition-duration: 0.25s;
-    background-color: $white-color;
+    background-color: $black-color;
   }
   .show {
-    width: 620px;
-    height: 100vh;
+    width: 100vw;
+    height: 329px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
     position: absolute;
     z-index: 15;
     top: 0;
     right: 0;
     background-color: $white-color;
-    padding: 134px 0 463px 127px;
+		padding-top: 60px;
+    padding-left: 10px;
+		.navigation__list-item {
+      margin: 0;
+			&:nth-child(even) {
+				margin: 15px 0;
+			}
+		}
+		.navigation__list-link {
+			color: $black-color;
+		}
+		.copyright-item {
+			display: block;
+		}
   }
-  .show .header__nav-item {
-    margin: 0;
+	.hide {
+		display: none;
   }
 	.backstage {
 		margin-top: 60px;
@@ -370,6 +434,7 @@
 	}
 	.pets__slider-container {
     margin-left: 0;
+		height: 754px;
   }
 	.pets__cards {
 		width: 600px;
@@ -516,6 +581,11 @@
 		}
 		&:nth-child(3) {
 			margin-right: 0;
+		}
+	}
+	.popup__wrapper {
+		.slider__card-review {
+			height: 391px;
 		}
 	}
 	.slider__card-review {
@@ -725,6 +795,9 @@
 	}
 	.pets__slider {
     margin-top: 37px;
+  }
+	.pets__slider-container {
+		height: 1388px;
   }
 	.pets__button-arrow {
 		display: none;
