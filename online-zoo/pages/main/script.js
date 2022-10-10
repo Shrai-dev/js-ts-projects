@@ -106,7 +106,7 @@ function createPets() {
 				newPets.push(randElem);
 			}
 
-			tempArr = [...newPets];
+			tempArr = [...tempArr, ...newPets];
 		}
 		return tempArr;
 	})();
@@ -165,19 +165,62 @@ function sortPetsList(list) {
 		unique8List = [...unique8List, ...uniqueStepList];
 	}
 	list = unique8List;
+	list = sortRecursivelyPetsList(list);
+	return list;
+}
+
+function sortRecursivelyPetsList(list) {
+	const length = list.length;
+	for (let i = 0; i < length / 6; i++) {
+		const stepList = list.slice(i * 6, i * 6 + 6);
+		for (let j = 0; j < 6; j++) {
+			const duplicatedItem = stepList.find((item, ind) => {
+				return item.name === stepList[j].name && ind !== j;
+			});
+			if (duplicatedItem !== undefined) {
+				const ind = i * 6 + j;
+				const which8OfList = Math.trunc(ind / 8);
+				list.splice(which8OfList * 8, 0, list.splice(ind, 1)[0]);
+				sortRecursivelyPetsList(list);
+			}
+		}
+	}
 	return list;
 }
 
 let currentPage = 0;
+let petsContainerHeight;
 
-prevPetsPage.addEventListener('click', (e) => {
+function calculatePetsContainerHeight() {
+	if (document.body.clientWidth > 1400) {
+		petsContainerHeight = 892;
+	} else if (
+		document.body.clientWidth > 999 &&
+		document.body.clientWidth < 1401
+	) {
+		petsContainerHeight = 890;
+	} else if (
+		document.body.clientWidth > 625 &&
+		document.body.clientWidth < 1000
+	) {
+		petsContainerHeight = 844;
+	}
+}
+
+prevPetsPage.addEventListener('click', () => {
 	currentPage--;
-	petsContainer.style.top = `calc(0px - ${892 * Math.abs(currentPage)}px)`;
+	calculatePetsContainerHeight();
+	petsContainer.style.top = `calc(0px - ${
+		petsContainerHeight * Math.abs(currentPage)
+	}px)`;
 	createPets();
 });
 
 nextPetsPage.addEventListener('click', () => {
 	currentPage++;
-	petsContainer.style.top = `calc(0px - ${892 * Math.abs(currentPage)}px)`;
+	calculatePetsContainerHeight();
+	petsContainer.style.top = `calc(0px - ${
+		petsContainerHeight * Math.abs(currentPage)
+	}px)`;
 	createPets();
 });

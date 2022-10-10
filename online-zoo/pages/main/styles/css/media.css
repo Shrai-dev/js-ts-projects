@@ -383,7 +383,8 @@
     margin-top: 77px; }
 
   .pets__slider-container {
-    margin-left: 0; }
+    margin-left: 0;
+    height: 754px; }
 
   .pets__cards {
     width: 600px;
@@ -681,6 +682,9 @@
 
   .pets__slider {
     margin-top: 37px; }
+
+  .pets__slider-container {
+    height: 1388px; }
 
   .pets__button-arrow {
     display: none; }
