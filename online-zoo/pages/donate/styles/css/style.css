@@ -555,7 +555,8 @@ a {
   background: transparent; }
   .animal__donate-amount:focus {
     outline: none;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #4B9200;
+    color: #4B9200;
     border-radius: 2px; }
   .animal__donate-amount::-webkit-outer-spin-button,
   .animal__donate-amount ::-webkit-inner-spin-button {

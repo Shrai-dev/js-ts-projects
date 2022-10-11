@@ -26,3 +26,46 @@ burgerIcon.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', close);
+
+const paySlider = document.querySelector('.pay__slider');
+const amountValues = document.querySelectorAll('.pay__label');
+const amountInputs = document.querySelectorAll('.pay__input');
+const amountValuesArray = Array.from(amountValues);
+const amountInputsArray = Array.from(amountInputs);
+const inputAmount = document.querySelector('.animal__donate-amount');
+
+inputAmount.addEventListener('input', (e) => {
+	const value = +inputAmount.value;
+	const maxValue = 9999;
+	if (value > maxValue) {
+		inputAmount.value = maxValue;
+	}
+
+	checkAmount();
+});
+
+paySlider.addEventListener('click', (e) => {
+	const activeAmount = e.target.dataset.payAmount.slice(1);
+	inputAmount.value = activeAmount;
+});
+
+function setInitialAmount() {
+	const activeElement = amountInputsArray.find((elem) => elem.id === '6');
+	activeElement.setAttribute('checked', 'true');
+}
+
+setInitialAmount();
+
+function checkAmount() {
+	if (
+		amountValuesArray.find(
+			(elem) => elem.dataset.payAmount.slice(1) === inputAmount.value
+		)
+	) {
+		const amount = amountValuesArray.find(
+			(elem) => elem.dataset.payAmount.slice(1) === inputAmount.value
+		);
+		const input = amountInputsArray.find((elem) => elem.id === amount.htmlFor);
+		input.setAttribute('checked', 'true');
+	}
+}

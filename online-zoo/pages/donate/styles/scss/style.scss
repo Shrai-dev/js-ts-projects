@@ -319,7 +319,8 @@ a {
     top: 10px;
     left: 64px;
 	}
-		.pay__input, .pay__label {
+		.pay__input, 
+		.pay__label {
 			box-sizing: border-box;
 			flex: 1;
 			user-select: none;
@@ -475,9 +476,10 @@ a {
 	background: transparent;
 	&:focus {
 		outline: none;
-		border: 1px solid $gray-smoky-color;
+		border: 1px solid $green-color;
+		color: $green-color;
     border-radius: 2px;
-	}
+	} 
 	&::-webkit-outer-spin-button,
 	::-webkit-inner-spin-button {
 		-webkit-appearance: none;
