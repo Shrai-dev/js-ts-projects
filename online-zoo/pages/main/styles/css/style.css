@@ -302,7 +302,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 20px 30px;
-  position: relative; }
+  position: relative;
+  transition: top 0.5s; }
 
 .pets__card {
   width: 366px;

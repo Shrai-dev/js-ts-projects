@@ -64,14 +64,16 @@
 		padding-top: 9px;
 		overflow-x: hidden;
   }
-	.pay-slider__bullets {
-    margin-left: -145px;
-		&::before {
-			content: '';
-			width: 785px;
-			margin-left: 134px;
+	.form__pay{
+		 .pay__slider {
+			width: 820px;
+			position: relative;
+			&::before {
+				width: 710px;
+				left: 55px;
+			}
 		}
-  }
+	}
 	.pay-slider__desc {
 		width: 820px;
 		position: relative;
@@ -351,7 +353,7 @@
   }
 	.animal__widget-title {
     margin-top: 41px;
-}
+  }
 	.animal__donate-icon {
     left: 56vw;
   }
@@ -407,6 +409,19 @@
     margin-left: 11px;
     margin-top: 177px;
   }  
+}
+
+@media screen and (max-width: 940px) {
+	.form__pay{
+		.pay__slider {
+		 width: 720px;
+		 position: relative;
+		 &::before {
+			 width: 630px;
+			 left: 45px;
+		 }
+	 }
+ }
 }
 
 @media screen and (max-width: 800px) {
