@@ -504,7 +504,8 @@ a {
 .testimonials__slider-inner {
   display: flex;
   position: relative;
-  width: 1164px; }
+  width: 1164px;
+  transition: 0.3s; }
 
 .slider__card,
 .popup__wrapper {
