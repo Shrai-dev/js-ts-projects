@@ -340,16 +340,18 @@ function rangeValue() {
 	const target = document.querySelector('.testimonials__slider-inner');
 	if (document.body.clientWidth > 1400) {
 		target.style.left = `calc(0px - ${298 * Math.abs(newValue - 1)}px)`;
+		target.style.transition = `0.3s`;
 	} else if (
 		document.body.clientWidth > 999 &&
 		document.body.clientWidth < 1401
 	) {
 		target.style.left = `calc(0px - ${319 * Math.abs(newValue)}px)`;
+		target.style.transition = `0.3s`;
 	}
 }
 
 testimonialsRange.addEventListener('click', rangeValue);
-testimonialsRange.addEventListener('touchstart', rangeValue);
+testimonialsRange.addEventListener('touchend', rangeValue);
 
 function createTestimonialsCards(list) {
 	testimonialsContainer.innerHTML += createTestimonials(list);
