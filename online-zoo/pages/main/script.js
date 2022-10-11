@@ -344,11 +344,12 @@ function rangeValue() {
 		document.body.clientWidth > 999 &&
 		document.body.clientWidth < 1401
 	) {
-		target.style.left = `calc(0px - ${319 * Math.abs(newValue - 1)}px)`;
+		target.style.left = `calc(0px - ${319 * Math.abs(newValue)}px)`;
 	}
 }
 
 testimonialsRange.addEventListener('click', rangeValue);
+testimonialsRange.addEventListener('touchstart', rangeValue);
 
 function createTestimonialsCards(list) {
 	testimonialsContainer.innerHTML += createTestimonials(list);
