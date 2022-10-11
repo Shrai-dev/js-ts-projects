@@ -290,8 +290,7 @@ a {
 	height: 82px;
 }
 
-.pay-slider,
-#form-wrapper {
+.pay-slider {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -305,20 +304,20 @@ a {
 		display: flex;
 		position: relative;
 		user-select: none;
-	align-items: center;
-	width: 974px;
-	height: 27px;
-	background: #404950;
-  border-radius: 2px;
-	&::before {
-    content: '';
-		border-bottom: 2px solid #72828E;
-		width: 850px;
-    height: 2px;
-    position: absolute;
-    top: 10px;
-    left: 64px;
-	}
+	  align-items: center;
+	  width: 974px;
+	  height: 27px;
+	  background: #404950;
+    border-radius: 2px;
+	  &::before {
+      content: '';
+	  	border-bottom: 2px solid #72828E;
+	  	width: 850px;
+      height: 2px;
+      position: absolute;
+      top: 10px;
+      left: 64px;
+	  }
 		.pay__input, 
 		.pay__label {
 			box-sizing: border-box;
