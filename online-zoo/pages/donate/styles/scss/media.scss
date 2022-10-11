@@ -72,6 +72,16 @@
 				width: 710px;
 				left: 55px;
 			}
+			.pay__label {
+					&:nth-child(1) {
+						display: none;
+					}
+			}
+			.pay__label {
+				&:nth-child(1) {
+					display: none;
+				}
+			}
 		}
 	}
 	.pay-slider__desc {
@@ -414,6 +424,19 @@
 @media screen and (max-width: 940px) {
 	.form__pay{
 		.pay__slider {
+		 width: 650px;
+		 position: relative;
+		 &::before {
+			width: 565px;
+			left: 45px;
+		 }
+	 }
+ }
+}
+
+@media screen and (max-width: 840px) {
+	.form__pay{
+		.pay__slider {
 		 width: 720px;
 		 position: relative;
 		 &::before {
@@ -443,6 +466,21 @@
     width: 94vw;
 		margin-top: 28px;
     padding: 30px 0 31px;
+  }
+	.form__pay {
+  	.pay__slider {
+			width: 94vw;
+			&::before {
+				width: 82vw;
+				left: 45px;
+			 }
+  	  .pay__label {
+  		  &::before {
+  		  	font-size: 20px;
+  		  	line-height: 130%;
+  		  }
+  	  }
+    }
   }
 	.animal__content {
     margin-top: 50px;
@@ -536,7 +574,7 @@
     background-position: -154px;
   }
 	.peak-friend {
-    height: 1145px;
+    height: 1200px;
   }
 	.peak-friend__title {
 		width: 100%;
@@ -550,7 +588,7 @@
 	}
 	.peek-friend__content {
     padding: 20px 0;
-		height: 591px;
+		height: 630px;
   }
 	.peek-friend__content-title {
     font-size: 24px;
@@ -601,6 +639,19 @@
     margin-top: 8px;
     margin-left: 1px;
   }
+	.form__pay {
+  	.pay__slider {
+			&::before {
+				left: 33px;
+			 }
+  	  .pay__label {
+  		  &::before {
+  		  	font-size: 18px;
+  		  	line-height: 30%;
+  		  }
+  	  }
+    }
+  }
 	.pay-slider {
     margin-top: -18px;
     margin-left: -10px;
@@ -609,10 +660,10 @@
     margin-top: 6px;
   }
 	.animal__widget-row {
-    margin-left: -100px;
+    margin-top: 10px;
   }
 	.animal__donate-icon {
-    left: 60vw;
+    left: 59vw;
   }
 	.footer {
     height: 334px;
@@ -735,9 +786,17 @@
     margin-top: 8px;
     margin-left: 1px;
   }
-	.pay-slider {
-    margin-top: -18px;
-    margin-left: -10px;
+	.form__pay {
+  	.pay__slider {
+			&::before {
+				left: 20px;
+			 }
+  	  .pay__label {
+  		  &::before {
+  		  	font-size: 14px;
+  		  }
+  	  }
+    }
   }
 	.animal__donate {
     margin-top: 6px;
@@ -750,9 +809,6 @@
 @media screen and (max-width: 400px) {
 	.animal__content {
     margin-left: 0;
-  }
-	.animal__widget-row {
-    margin-left: -140px;
   }
 	.animal__donate-icon {
     left: 66vw;
