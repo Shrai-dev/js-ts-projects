@@ -290,106 +290,165 @@ a {
 	height: 82px;
 }
 
-.pay-slider {
-	width: 976px;
+.pay-slider,
+#form-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.pay-slider__bullets {
-	display: flex;
+.form__pay {
+	width: 90%;
+	max-width: 976px;
+	.pay__slider {
+		display: flex;
+		position: relative;
+		user-select: none;
 	align-items: center;
-	width: 976px;
+	width: 974px;
 	height: 27px;
 	background: #404950;
   border-radius: 2px;
-	padding-left: 26px;
-	padding-right: 30px;
-	position: relative;
 	&::before {
     content: '';
 		border-bottom: 2px solid #72828E;
-		width: 915px;
-		height: 2px;
-		position: absolute;
-		top: 10px;
+		width: 850px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 64px;
+	}
+		.pay__input, 
+		.pay__label {
+			box-sizing: border-box;
+			flex: 1;
+			user-select: none;
+			cursor: pointer;
+		}
+		.pay__label {
+			display: inline-block;
+			position: relative;
+			width: 12.5%;
+			height: 100%;
+			user-select: none;
+			&::before {
+				content: attr(data-pay-amount);
+				position: absolute;
+				left: 50%;
+				padding-top: 10px;
+				transform: translate(-50%, 45px);
+				font-family: $font-family;
+        font-style: normal;
+        font-weight: $medium-font-weight;
+        font-size: 26px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $black-blue-color;
+				white-space: nowrap;
+				transition: all 0.15s ease-in-out;
+			}
+			&::after {
+				content: " ";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 12px;
+			  height: 12px;
+			  background: $yellow-color;
+			  border-radius: 50%;
+				pointer-events: none;
+				user-select: none;
+				z-index: 1;
+				cursor: pointer;
+				transition: all 0.15s ease-in-out;
+			}
+		}
+		.pay__input {
+			display: none;
+			&:checked {
+				+ .pay__label::before {
+					color: $orange-color;
+					opacity: 1;
+				}
+				+ .pay__label::after {
+					border-width: 4px;
+					transform: translate(-50%, -50%) scale(0.75);
+				}
+				~ .pay-amount-pos {
+					opacity: 1;
+				}
+				@for $i from 1 through $number-of-options {
+					&:nth-child(#{$i * 2 - 1}) ~ .pay-amount-pos {
+						left: #{($i * 12.5%) - (6.25%)};
+						&::before {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 22px;
+						  height: 22px;
+							border: 2px solid $light-orange-color;
+							border-radius: 50%;
+							top: -7.5px;
+						  left: -7px;
+						}	
+						&::after {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 38px;
+						  height: 38px;
+							border: 2px solid $light-orange-color;
+							border-radius: 50%;
+							top: -15.5px;
+						  left: -15px;
+						}
+					}
+				}
+			}
+		}
+		.pay-amount-pos {
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 12px;
+			height: 12px;
+			background: $yellow-color;
+			border-radius: 50%;
+			transition: all 0.15s ease-in-out;
+			transform: translate(-50%, -50%);
+			border: none;
+			opacity: 0;
+			z-index: 2;
+		}
+	}
+	&:valid {
+		.pay__slider {
+			.pay__input {
+				+ .pay__label::before {
+					transition: all 0.15s linear;
+				}
+				&:checked + .pay__label::before {
+					transition: all 0.15s linear;
+				}
+			}
+		}
 	}
 }
 
-.pay__input {
-	display: none;
-}
-
-.pay__label {
-	cursor: pointer;
-	&:nth-child(2n) {
-		margin-right: 120px;
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+		width: 24px;
+		opacity: 1;
+		margin-right: 12px;
 	}
-}
-
-.pay__bullet-btn {
-	width: 10px;
-	height: 10px;
-	background: $yellow-color;
-	border-radius: 50%;
-	position: relative;
-}
-
-.pay__bullet-btn--checked {
-	&::before {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 22px;
-    height: 22px;
-		border: 2px solid $light-orange-color;
-		border-radius: 50%;
-		top: -8.5px;
-    left: -8px;
-	}	
-	&::after {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 38px;
-    height: 38px;
-		border: 2px solid $light-orange-color;
-		border-radius: 50%;
-		top: -16.5px;
-    left: -16px;
-	}	
-}
-
-.pay-slider__desc {
-	margin-top: 12px;
-	display: flex;
-	font-family: $font-family;
-  font-style: normal;
-  font-weight: $medium-font-weight;
-  font-size: 26px;
-  line-height: 140%;
-  text-transform: uppercase;
-  color: $black-blue-color;
-}
-
-.pay-slider__amount {
-	&:nth-child(1),
-	&:nth-child(2),
-	&:nth-child(3) {
-		margin-right: 62px;
-	}
-	&:nth-child(4),
-	&:nth-child(5),
-	&:nth-child(6) {
-		margin-right: 75px;
-	}
-	&:nth-child(7) {
-		margin-right: 90px;
-	}
-}
-
-.pay-slider__amount--active {
-	color: $light-orange-color;
-	> svg path {
-		fill: $light-orange-color;
+	to {
+		transform: rotate(360deg);
+		width: 24px;
+		opacity: 1;
+		margin-right: 12px;
 	}
 }
 
@@ -417,8 +476,14 @@ a {
 	background: transparent;
 	&:focus {
 		outline: none;
-		border: 1px solid $gray-smoky-color;
+		border: 1px solid $green-color;
+		color: $green-color;
     border-radius: 2px;
+	} 
+	&::-webkit-outer-spin-button,
+	::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
 	}
 }
 
@@ -435,10 +500,11 @@ a {
 }
 
 .animal__choice-label {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: transparent;
+	position: relative;
+	padding-left: 26px;
+	padding-right: 31px;
+	margin-bottom: 12px;
+	margin-left: 16px;
 	cursor: pointer;
 	font-family: $font-family;
   font-style: normal;
@@ -446,32 +512,40 @@ a {
   font-size: 16px;
   line-height: 140%;
   color: $black-blue-color;
-	#btn-2 {
-		margin-left: 49px;
-	}
  }
 
 .animal__choice-radio {
-	display: none;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	position: absolute;
+	cursor: pointer;
 }
 
-.animal__bullet-btn {
-	width: 16px;
-	height: 16px;
-	border: 1px solid $light-orange-color;
+.animal__choice-checkbox {
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background: none;
+    border: 1px solid $orange-color;
+    border-radius: 8px;
 }
 
-#btn-1,
-#btn-2 {
-	display: block;
-	width: 1rem;
-	height: 1rem;
-	border-radius: 50%;
-	margin-right: 10px;
-}
-
-#month:checked ~ .slider .slider__bullets .slider__bullet #btn-1 {
-	background-color: $green-color;
+.animal__choice {
+  .animal__choice-label:hover {
+    .animal__choice-radio ~ .animal__choice-checkbox {
+			background-color: $green-color;
+	    border-color: $green-color;
+		}
+	}
+	.animal__choice-label {
+    .animal__choice-radio:checked ~ .animal__choice-checkbox {
+			background-color: $green-color;
+	    border-color: $green-color;
+		}
+	}
 }
 
 .link {

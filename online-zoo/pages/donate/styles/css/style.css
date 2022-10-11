@@ -249,86 +249,289 @@ a {
   margin-top: 16px;
   height: 82px; }
 
-.pay-slider {
-  width: 976px; }
-
-.pay-slider__bullets {
+.pay-slider,
+#form-wrapper {
+  width: 100%;
   display: flex;
-  align-items: center;
-  width: 976px;
-  height: 27px;
-  background: #404950;
-  border-radius: 2px;
-  padding-left: 26px;
-  padding-right: 30px;
-  position: relative; }
-  .pay-slider__bullets::before {
-    content: '';
-    border-bottom: 2px solid #72828E;
-    width: 915px;
-    height: 2px;
-    position: absolute;
-    top: 10px; }
+  flex-direction: column;
+  align-items: center; }
 
-.pay__input {
-  display: none; }
+.form__pay {
+  width: 90%;
+  max-width: 976px; }
+  .form__pay .pay__slider {
+    display: flex;
+    position: relative;
+    user-select: none;
+    align-items: center;
+    width: 974px;
+    height: 27px;
+    background: #404950;
+    border-radius: 2px; }
+    .form__pay .pay__slider::before {
+      content: '';
+      border-bottom: 2px solid #72828E;
+      width: 850px;
+      height: 2px;
+      position: absolute;
+      top: 10px;
+      left: 64px; }
+    .form__pay .pay__slider .pay__input, .form__pay .pay__slider .pay__label {
+      box-sizing: border-box;
+      flex: 1;
+      user-select: none;
+      cursor: pointer; }
+    .form__pay .pay__slider .pay__label {
+      display: inline-block;
+      position: relative;
+      width: 12.5%;
+      height: 100%;
+      user-select: none; }
+      .form__pay .pay__slider .pay__label::before {
+        content: attr(data-pay-amount);
+        position: absolute;
+        left: 50%;
+        padding-top: 10px;
+        transform: translate(-50%, 45px);
+        font-family: "Roboto", serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #333B41;
+        white-space: nowrap;
+        transition: all 0.15s ease-in-out; }
+      .form__pay .pay__slider .pay__label::after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: #FFEE2E;
+        border-radius: 50%;
+        pointer-events: none;
+        user-select: none;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out; }
+    .form__pay .pay__slider .pay__input {
+      display: none; }
+      .form__pay .pay__slider .pay__input:checked + .pay__label::before {
+        color: #E47209;
+        opacity: 1; }
+      .form__pay .pay__slider .pay__input:checked + .pay__label::after {
+        border-width: 4px;
+        transform: translate(-50%, -50%) scale(0.75); }
+      .form__pay .pay__slider .pay__input:checked ~ .pay-amount-pos {
+        opacity: 1; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(1) ~ .pay-amount-pos {
+        left: 6.25%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(1) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(1) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(3) ~ .pay-amount-pos {
+        left: 18.75%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(3) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(3) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(5) ~ .pay-amount-pos {
+        left: 31.25%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(5) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(5) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(7) ~ .pay-amount-pos {
+        left: 43.75%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(7) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(7) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(9) ~ .pay-amount-pos {
+        left: 56.25%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(9) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(9) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(11) ~ .pay-amount-pos {
+        left: 68.75%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(11) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(11) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(13) ~ .pay-amount-pos {
+        left: 81.25%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(13) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(13) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+      .form__pay .pay__slider .pay__input:checked:nth-child(15) ~ .pay-amount-pos {
+        left: 93.75%; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(15) ~ .pay-amount-pos::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 22px;
+          height: 22px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -7.5px;
+          left: -7px; }
+        .form__pay .pay__slider .pay__input:checked:nth-child(15) ~ .pay-amount-pos::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 38px;
+          height: 38px;
+          border: 2px solid #FE9013;
+          border-radius: 50%;
+          top: -15.5px;
+          left: -15px; }
+    .form__pay .pay__slider .pay-amount-pos {
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      background: #FFEE2E;
+      border-radius: 50%;
+      transition: all 0.15s ease-in-out;
+      transform: translate(-50%, -50%);
+      border: none;
+      opacity: 0;
+      z-index: 2; }
+  .form__pay:valid .pay__slider .pay__input + .pay__label::before {
+    transition: all 0.15s linear; }
+  .form__pay:valid .pay__slider .pay__input:checked + .pay__label::before {
+    transition: all 0.15s linear; }
 
-.pay__label {
-  cursor: pointer; }
-  .pay__label:nth-child(2n) {
-    margin-right: 120px; }
-
-.pay__bullet-btn {
-  width: 10px;
-  height: 10px;
-  background: #FFEE2E;
-  border-radius: 50%;
-  position: relative; }
-
-.pay__bullet-btn--checked::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #FE9013;
-  border-radius: 50%;
-  top: -8.5px;
-  left: -8px; }
-.pay__bullet-btn--checked::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 38px;
-  height: 38px;
-  border: 2px solid #FE9013;
-  border-radius: 50%;
-  top: -16.5px;
-  left: -16px; }
-
-.pay-slider__desc {
-  margin-top: 12px;
-  display: flex;
-  font-family: "Roboto", serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 140%;
-  text-transform: uppercase;
-  color: #333B41; }
-
-.pay-slider__amount:nth-child(1), .pay-slider__amount:nth-child(2), .pay-slider__amount:nth-child(3) {
-  margin-right: 62px; }
-.pay-slider__amount:nth-child(4), .pay-slider__amount:nth-child(5), .pay-slider__amount:nth-child(6) {
-  margin-right: 75px; }
-.pay-slider__amount:nth-child(7) {
-  margin-right: 90px; }
-
-.pay-slider__amount--active {
-  color: #FE9013; }
-  .pay-slider__amount--active > svg path {
-    fill: #FE9013; }
-
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    width: 24px;
+    opacity: 1;
+    margin-right: 12px; }
+  to {
+    transform: rotate(360deg);
+    width: 24px;
+    opacity: 1;
+    margin-right: 12px; } }
 .animal__donate {
   margin-top: 44px;
   display: flex;
@@ -352,8 +555,13 @@ a {
   background: transparent; }
   .animal__donate-amount:focus {
     outline: none;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #4B9200;
+    color: #4B9200;
     border-radius: 2px; }
+  .animal__donate-amount::-webkit-outer-spin-button,
+  .animal__donate-amount ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
 
 .animal__donate-icon {
   position: absolute;
@@ -366,10 +574,11 @@ a {
   width: 210px; }
 
 .animal__choice-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
+  position: relative;
+  padding-left: 26px;
+  padding-right: 31px;
+  margin-bottom: 12px;
+  margin-left: 16px;
   cursor: pointer;
   font-family: "Roboto", serif;
   font-style: normal;
@@ -377,27 +586,30 @@ a {
   font-size: 16px;
   line-height: 140%;
   color: #333B41; }
-  .animal__choice-label #btn-2 {
-    margin-left: 49px; }
 
 .animal__choice-radio {
-  display: none; }
+  opacity: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  cursor: pointer; }
 
-.animal__bullet-btn {
-  width: 16px;
+.animal__choice-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 16px;
-  border: 1px solid #FE9013; }
+  width: 16px;
+  background: none;
+  border: 1px solid #E47209;
+  border-radius: 8px; }
 
-#btn-1,
-#btn-2 {
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  margin-right: 10px; }
-
-#month:checked ~ .slider .slider__bullets .slider__bullet #btn-1 {
-  background-color: #4B9200; }
+.animal__choice .animal__choice-label:hover .animal__choice-radio ~ .animal__choice-checkbox {
+  background-color: #4B9200;
+  border-color: #4B9200; }
+.animal__choice .animal__choice-label .animal__choice-radio:checked ~ .animal__choice-checkbox {
+  background-color: #4B9200;
+  border-color: #4B9200; }
 
 .link {
   display: inline-block;
