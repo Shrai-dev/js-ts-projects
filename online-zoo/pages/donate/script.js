@@ -37,6 +37,9 @@ const inputAmount = document.querySelector('.animal__donate-amount');
 inputAmount.addEventListener('input', (e) => {
 	const value = +inputAmount.value;
 	const maxValue = 9999;
+	if (inputAmount.value.length > 4) {
+		inputAmount.value = inputAmount.value.slice(0, 4);
+	}
 	if (value > maxValue) {
 		inputAmount.value = maxValue;
 	}
@@ -67,5 +70,13 @@ function checkAmount() {
 		);
 		const input = amountInputsArray.find((elem) => elem.id === amount.htmlFor);
 		input.setAttribute('checked', 'true');
+	} else if (
+		amountValuesArray.find(
+			(elem) => elem.dataset.payAmount.slice(1) !== inputAmount.value
+		)
+	) {
+		amountInputsArray.forEach((elem) =>
+			elem.removeAttribute('checked', 'true')
+		);
 	}
 }
