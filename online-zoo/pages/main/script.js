@@ -302,7 +302,6 @@ let petsContainerHeight;
 
 function calculatePetsContainerHeight() {
 	if (document.body.clientWidth > 1400) {
-		// 1400 - 17  -- 17 - scroll width
 		petsContainerHeight = 892;
 	} else if (
 		document.body.clientWidth > 999 &&
@@ -350,8 +349,7 @@ function rangeValue() {
 	}
 }
 
-testimonialsRange.addEventListener('click', rangeValue);
-testimonialsRange.addEventListener('touchend', rangeValue);
+testimonialsRange.addEventListener('input', rangeValue);
 
 function createTestimonialsCards(list) {
 	testimonialsContainer.innerHTML += createTestimonials(list);
