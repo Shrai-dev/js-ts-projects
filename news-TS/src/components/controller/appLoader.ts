@@ -1,9 +1,10 @@
+import { API_KEY, API_URL } from '../../types';
 import Loader from './loader';
 
 class AppLoader extends Loader {
     constructor() {
-        super('https://newsapi.org/v2/', {
-            apiKey: '', // получите свой ключ https://newsapi.org/
+        super(API_URL.URL, {
+            apiKey: API_KEY.KEY,
         });
     }
 }
