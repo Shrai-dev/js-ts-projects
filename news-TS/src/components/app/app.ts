@@ -15,6 +15,18 @@ class App {
             this.controller.getNews(e, (data) => this.view.drawNews(data!))
         );
         this.controller.getSources((data) => this.view.drawSources(data!));
+        const themeToggler = <HTMLElement>document.querySelector('.header__theme-btn');
+        themeToggler.addEventListener('click', () => {
+            if ((<HTMLElement>document.querySelector('body')).classList.contains('light-body')) {
+                (<HTMLElement>document.querySelector('body')).classList.add('dark-body');
+                (<HTMLElement>document.querySelector('body')).classList.remove('light-body');
+                themeToggler.innerText = 'light theme';
+            } else {
+                (<HTMLElement>document.querySelector('body')).classList.remove('dark-body');
+                (<HTMLElement>document.querySelector('body')).classList.add('light-body');
+                themeToggler.innerText = 'dark theme';
+            }
+        });
     }
 }
 

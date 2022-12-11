@@ -4,19 +4,41 @@
     box-sizing: border-box;
 }
 
-body {
+.dark-body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
 }
 
+.light-body,
+.light-body .header__theme-btn {
+    filter: invert(100%);
+}
+
+.light-body div:not(.news__meta-photo),
+video {
+    filter: invert(100%);
+}
+
 header {
     padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1 {
     color: #fff;
     font: 800 2em 'Fira Sans', sans-serif;
+}
+
+.header__theme-btn {
+    width: 145px;
+    height: 45px;
+    font-size: 0.9em;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
 }
 
 footer {
