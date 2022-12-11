@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: #fff;
     background: #17181c;
@@ -9,27 +15,42 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
-    font-weight: 800;
+    color: #fff;
+    font: 800 2em 'Fira Sans', sans-serif;
 }
 
 footer {
     height: 100px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
 }
-footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+
+.footer__year {
+    color: #fff;
+    font: 300 1.2em 'Fira Sans', sans-serif;
 }
-footer .copyright a {
-    color: #444;
+
+.footer__link {
+    text-decoration: none;
+    padding: 5px 8px;
+    color: #fff;
+    cursor: pointer;
+    font: 300 1.2em 'Fira Sans', sans-serif;
 }
-footer .copyright a:hover {
-    color: #555;
+
+.footer__link:hover,
+.footer__link:focus {
+    color: #69db7e;
+    transform: translateY(-0.25em);
 }
-footer .copyright:before {
-    content: '©';
+
+.footer__image {
+    width: 100px;
+    padding: 5px;
+    background: #fff;
+}
+
+.footer__link:hover .footer__image {
+    background: #69db7e;
 }
