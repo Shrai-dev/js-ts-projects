@@ -1,10 +1,10 @@
-import { API_KEY, API_URL } from '../../types';
+import { API_DATA } from '../../types';
 import Loader from './loader';
 
 class AppLoader extends Loader {
     constructor() {
-        super(API_URL.URL, {
-            apiKey: API_KEY.KEY,
+        super(API_DATA.URL, {
+            apiKey: API_DATA.KEY,
         });
     }
 }

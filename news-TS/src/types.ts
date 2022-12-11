@@ -28,11 +28,8 @@ export interface IData {
     sources: ISources[];
 }
 
-export enum API_KEY {
+export enum API_DATA {
     KEY = 'c467ad4d887946eb9def180f6b8e40dc',
-}
-
-export enum API_URL {
     URL = 'https://newsapi.org/v2/',
 }
 
@@ -49,3 +46,5 @@ export type GetResp = {
 export type Options = {
     [key: string]: string;
 };
+
+export type Callback = <T>(data?: T) => void;
