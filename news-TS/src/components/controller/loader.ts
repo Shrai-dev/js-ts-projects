@@ -2,7 +2,7 @@ import { Callback, GetResp, IData, ResponseStatus } from '../../types';
 
 class Loader {
     readonly baseLink: string;
-    readonly options: { [x: string]: string } | undefined;
+    readonly options: GetResp['options'] | undefined;
     constructor(baseLink: string, options: {} | undefined) {
         this.baseLink = baseLink;
         this.options = options;
@@ -27,7 +27,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: { [x: string]: string }, endpoint: string): string {
+    makeUrl(options: GetResp['options'], endpoint: GetResp['endpoint']): string {
         const urlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -38,11 +38,11 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: Callback, options = {}): void {
+    load(method: string, endpoint: GetResp['endpoint'], callback: Callback, options = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
-            .then((data) => callback(data))
+            .then((data: IData) => callback(data))
             .catch((err: string) => console.error(err));
     }
 }
