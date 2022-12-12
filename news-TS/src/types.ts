@@ -1,10 +1,7 @@
 export interface IItemNews {
     urlToImage: string;
     author: string;
-    source: {
-        name: string;
-        id: string;
-    };
+    source: ISource;
     publishedAt: string;
     title: string | null;
     description: string | null;
@@ -19,6 +16,11 @@ export interface ISources {
     category: string;
     language: string;
     country: string;
+}
+
+export interface ISource {
+    name: string;
+    id: string;
 }
 
 export interface IData {

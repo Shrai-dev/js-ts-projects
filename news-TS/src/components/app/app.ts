@@ -12,9 +12,18 @@ class App {
     start() {
         const sourcesContainer = <HTMLElement>document.querySelector('.sources');
         sourcesContainer.addEventListener('click', (e: Event) =>
-            this.controller.getNews(e, (data) => this.view.drawNews(data!))
+            this.controller.getNews(e, (data) => {
+                if (data !== undefined) {
+                    return this.view.drawNews(data);
+                }
+            })
         );
-        this.controller.getSources((data) => this.view.drawSources(data!));
+        this.controller.getSources((data) => {
+            if (data !== undefined) {
+                return this.view.drawSources(data);
+            }
+        });
+
         const themeToggler = <HTMLElement>document.querySelector('.header__theme-btn');
         themeToggler.addEventListener('click', () => {
             if ((<HTMLElement>document.querySelector('body')).classList.contains('light-body')) {

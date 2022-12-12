@@ -3,7 +3,7 @@ import { Callback, GetResp, IData, ResponseStatus } from '../../types';
 class Loader {
     readonly baseLink: string;
     readonly options: GetResp['options'] | undefined;
-    constructor(baseLink: string, options: {} | undefined) {
+    constructor(baseLink: string, options: GetResp['options'] | undefined) {
         this.baseLink = baseLink;
         this.options = options;
     }
