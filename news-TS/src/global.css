@@ -10,6 +10,10 @@
     font-family: sans-serif;
 }
 
+.light-body {
+    background-color: #f5f5f5;
+}
+
 .light-body,
 .light-body .header__theme-btn {
     filter: invert(100%);
@@ -20,6 +24,10 @@ video {
     filter: invert(100%);
 }
 
+.light-body ::-webkit-scrollbar-thumb {
+    background: #17181c;
+}
+
 header {
     padding: 10px 30px;
     display: flex;
@@ -27,7 +35,7 @@ header {
 }
 
 header h1 {
-    color: #fff;
+    color: #dddcdc;
     font: 800 2em 'Fira Sans', sans-serif;
 }
 
@@ -35,10 +43,30 @@ header h1 {
     width: 145px;
     height: 45px;
     font-size: 0.9em;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     background: transparent;
-    color: #fff;
+    color: #dddcdc;
     cursor: pointer;
+}
+
+main {
+    padding: 10px 30px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #999;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 3px;
 }
 
 footer {
@@ -75,4 +103,17 @@ footer {
 
 .footer__link:hover .footer__image {
     background: #69db7e;
+}
+
+@media screen and (max-width: 768px) {
+    .header__theme-btn {
+        width: 105px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        height: 180px;
+        flex-direction: column;
+    }
 }
