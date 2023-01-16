@@ -1,0 +1,26 @@
+{
+  // "compilerOptions": {
+  //   "allowSyntheticDefaultImports": true,
+  //   "noImplicitAny": true,
+  //   "module": "es6",
+  //   "target": "es5",
+  //   "allowJs": true
+  // },
+  // "files": ["src/index.ts"]
+  "compilerOptions": {
+    "target": "es6",
+    "noImplicitAny": true,
+    "module": "es6",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./src/*"]
+    },
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
