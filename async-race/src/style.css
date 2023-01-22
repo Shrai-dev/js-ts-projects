@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 100%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  text-transform: uppercase;
+  background-color: #363636;
+  margin: 0 8px;
+}
+
+.title {
+  text-align: center;
+  color: #e6c300;
+  margin: 0.3em 0;
+}
+
+.subtitle {
+  margin-block-start: 0.23em;
+  margin-block-end: 0.23em;
+}
+
+.container {
+  min-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.wrapper {
+  display: flex;
+  width: 300%;
+}
+
+#garage-view,
+#winners-view {
+  min-width: 500px;
+  max-width: 600px;
+  margin-right: 500px;
+}
+
+#car-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.race-controls {
+  margin-top: 10px;
+}
+
+.garage {
+  min-width: 500px;
+}
+
+.garage li {
+  list-style-type: none;
+  padding-top: 10px;
+  border-bottom: 5px dashed #dadada;
+}
+
+ul.garage {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.road {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.launch-pad {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.launch-pad .control-panel {
+  margin-right: 10px;
+  display: flex;
+}
+
+.road .flag {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  width: 32px;
+  color: red;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.car.drive {
+  animation-fill-mode: forwards;
+  animation-name: slideIn;
+}
+
+.car.drive.crash {
+  animation-play-state: paused;
+}
+
+.pagination {
+  margin-top: 10px;
+}
+
+.table-wins,
+.table-time {
+  cursor: pointer;
+}
+
+.table-wins:hover,
+.table-time:hover {
+  transform: scale(1.1);
+  filter: brightness(0.5);
+}
+
+th:nth-child(3),
+tr:nth-child(3) {
+  margin-left: 3px;
+  width: 60px;
+}
+
+.message-wrap {
+  position: absolute;
+  top: 35vh;
+  left: 0;
+  right: 0;
+  width: 28vw;
+  height: 50px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#message.visible {
+  color: #12e953;
+  font-size: 26px;
+  background-color: #363636;
+  text-align: center;
+}
