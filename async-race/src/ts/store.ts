@@ -1,6 +1,6 @@
 import { WinnersView } from './interfaces';
 
-export const store = {
+export const initialStore = {
   carsPage: 1,
   cars: [],
   carsCount: 0,
