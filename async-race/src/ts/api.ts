@@ -6,13 +6,21 @@ import { BASE_URL, GARAGE_URL, ENGINE_URL, WINNERS_URL } from './constants';
 
 export default class Api {
   store: Store;
+
   base: string;
+
   garage: string;
+
   winners: string;
+
   parents: null;
+
   dispatch: Buttons;
+
   targets: string[];
+
   req: string;
+
   engine: string;
 
   constructor(st: Store) {
@@ -53,13 +61,13 @@ export default class Api {
         return this.store;
       }
       case 'getAppWinners': {
-        const { items, count } = await getWinners(1, 10, '', '');
+        const { items, count } = await getWinners(1, '', '', 10);
         this.store.winners = <WinnersView>(<unknown>items);
         this.store.winnersCount = +(<string>count);
         return this.store;
       }
       case 'getWinners': {
-        const { items, count } = await getWinners(1, 10, '', '');
+        const { items, count } = await getWinners(1, '', '', 10);
         this.store.winners = <WinnersView>(<unknown>items);
         this.store.winnersCount = +(<string>count);
         break;

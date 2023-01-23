@@ -1,4 +1,4 @@
-import { GARAGE_URL, ENGINE_URL } from './url';
+import { GARAGE_URL, ENGINE_URL } from './constants';
 
 export const createCar = async (body: { [k: string]: string }) =>
   (
@@ -41,6 +41,11 @@ export const drive = async (engin: string, id: number) => {
   return res.status !== 200 ? { success: false } : { ...(await res.json()) };
 };
 
+export const startEngine = async (id: number) =>
+  (await fetch(`${ENGINE_URL}?id=${id}&status=started`, { method: 'PATCH' })).json();
+
+export const stopEngine = (id: number) => fetch(`${ENGINE_URL}?id=${id}?status=stopped`, { method: 'PATCH' });
+
 export const startDriving = async (id: number) => {
   const startButton = <HTMLInputElement>document.getElementById(`start-engine-car-${id}`);
   startButton.disabled = true;
@@ -76,11 +81,5 @@ export const stopDriving = async (id: number) => {
   car.classList.remove('drive');
   car.style.animationPlayState = 'initial';
 };
-
-export const startEngine = async (id: number) =>
-  (await fetch(`${ENGINE_URL}?id=${id}&status=started`, { method: 'PATCH' })).json();
-
-export const stopEngine = async (id: number) =>
-  await fetch(`${ENGINE_URL}?id=${id}?status=stopped`, { method: 'PATCH' });
 
 export const deleteCar = async (id: number) => (await fetch(`${GARAGE_URL}/${id}`, { method: 'DELETE' })).json();

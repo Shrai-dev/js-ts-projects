@@ -17,4 +17,4 @@ const getRandomColor = () => {
 };
 
 export const generateRandomCars = (count = 100) =>
-  new Array(count).fill(1).map((_) => ({ name: getRandomName(), color: getRandomColor() }));
+  new Array(count).fill(1).map(() => ({ name: getRandomName(), color: getRandomColor() }));

@@ -1,5 +1,5 @@
 import DrawHTML from './drawHTML';
-import { saveWinner, getWinners } from './operateWinner';
+import { saveWinner, getWinners, deleteWinner } from './operateWinner';
 import { renderWinners, renderGarage } from './renderViews';
 import { generateRandomCars } from './helpers';
 import { Store, Car, WinnersView } from './interfaces';
@@ -10,15 +10,25 @@ import { BASE_URL, GARAGE_URL, ENGINE_URL, WINNERS_URL } from './constants';
 
 export default class Buttons {
   targets: string[];
+
   store: Store;
+
   draw: DrawHTML;
+
   selectedCar: Car;
+
   base: string;
+
   garage: string;
+
   engine: string;
+
   winners: string;
+
   classTargets: string;
+
   clicked: NodeListOf<Element>;
+
   onEvent: (e: MouseEvent) => Promise<void>;
 
   constructor(target: string[], st: Store) {
@@ -42,10 +52,10 @@ export default class Buttons {
 
   setEventsSubmit() {
     (<HTMLElement>document.getElementById('update')).addEventListener('submit', (e: Event) =>
-      this.dispApi(<MouseEvent>e)
+      this.dispApi(<MouseEvent>e),
     );
     (<HTMLElement>document.getElementById('create')).addEventListener('submit', (e: Event) =>
-      this.dispApi(<MouseEvent>e)
+      this.dispApi(<MouseEvent>e),
     );
   }
 
@@ -75,6 +85,7 @@ export default class Buttons {
         case 'remove-button': {
           const id = +(<HTMLElement>event.target).id.split('remove-cars')[1];
           await deleteCar(id);
+          await deleteWinner(WINNERS_URL, id);
           await updateStateGarage(this.store);
           (<HTMLElement>document.getElementById('garage')).innerHTML = renderGarage(this.store);
           break;
@@ -83,7 +94,7 @@ export default class Buttons {
         case 'generator-button': {
           (<HTMLInputElement>event.target).disabled = true;
           const cars = generateRandomCars();
-          await Promise.all(cars.map(async (c) => await createCar(c)));
+          await Promise.all(cars.map((c) => createCar(c)));
           await updateStateGarage(this.store);
           const { items, count } = await getCars(1);
           this.store.cars = items;
@@ -107,7 +118,7 @@ export default class Buttons {
           const win = res.filter((el) => el.status === 200).sort((a, b) => a.time - b.time)[0];
 
           await saveWinner(win);
-          await getWinners(1, 10, '', '');
+          await getWinners(1, '', '', 10);
           await updateStateWinners(this.store, this.winners);
           renderWinners(this.store);
           [...this.clicked].map((el) => ((<HTMLInputElement>el).disabled = true));
@@ -131,7 +142,7 @@ export default class Buttons {
           [...this.clicked].map((el) => ((<HTMLInputElement>el).disabled = false));
           [...document.querySelectorAll('.stop-engine-button')].map((el) => ((<HTMLInputElement>el).disabled = true));
           [...document.querySelectorAll('button[type="submit"]')].map(
-            (el) => ((<HTMLInputElement>el).disabled = false)
+            (el) => ((<HTMLInputElement>el).disabled = false),
           );
           this.store.isRace = false;
           paginate(this.store);
@@ -189,9 +200,9 @@ export default class Buttons {
           this.store.sortOrder = this.store.sortOrder === 'ASC' ? 'DESC' : 'ASC';
           const { items, count } = await getWinners(
             this.store.winnersPage,
-            this.store.limit,
             this.store.sortBy,
-            this.store.sortOrder
+            this.store.sortOrder,
+            this.store.limit,
           );
           this.store.winners = <WinnersView>(<unknown>items);
           this.store.winnersCount = +(<string>count);
@@ -205,9 +216,9 @@ export default class Buttons {
           this.store.sortOrder = this.store.sortOrder === 'ASC' ? 'DESC' : 'ASC';
           const { items, count } = await getWinners(
             this.store.winnersPage,
-            this.store.limit,
             this.store.sortBy,
-            this.store.sortOrder
+            this.store.sortOrder,
+            this.store.limit,
           );
           this.store.winners = <WinnersView>(<unknown>items);
           this.store.winnersCount = +(<string>count);
@@ -229,8 +240,8 @@ export default class Buttons {
             new Map(
               [...events]
                 .filter((el) => !!(<HTMLInputElement>el).name)
-                .map((item) => [(<HTMLInputElement>item).name, (<HTMLInputElement>item).value])
-            )
+                .map((item) => [(<HTMLInputElement>item).name, (<HTMLInputElement>item).value]),
+            ),
           );
           await createCar(car);
           await updateStateGarage(this.store);
@@ -245,8 +256,8 @@ export default class Buttons {
             new Map(
               [...events]
                 .filter((el) => !!(<HTMLInputElement>el).name)
-                .map((item) => [(<HTMLInputElement>item).name, (<HTMLInputElement>item).value])
-            )
+                .map((item) => [(<HTMLInputElement>item).name, (<HTMLInputElement>item).value]),
+            ),
           );
           await updateCar(+this.selectedCar.id, car);
           await updateStateGarage(this.store);

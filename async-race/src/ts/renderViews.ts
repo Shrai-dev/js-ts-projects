@@ -1,19 +1,5 @@
 import { Car, Store, WinnersView } from './interfaces';
 
-export const renderGarage = (st: Store) => `
-  <h2 class='title'>Garage (${String(st.carsCount)})</h2>
-  <h3 class='subtitle'>Page #${String(st.carsPage)}</h3>
-  <ul class="garage">
-    ${st.cars
-      .map(
-        (car) => `
-      <li>${renderCar(car, false)}</li>
-    `
-      )
-      .join('')}
-  </ul>
-`;
-
 export const renderCar = ({ id, name, color }: Car, isEngineStarted: boolean) => `
   <div class="general-buttons">
     <button class="button select-button" id="select-cars${id}">Select</button>
@@ -42,6 +28,20 @@ export const renderCar = ({ id, name, color }: Car, isEngineStarted: boolean) =>
   </div>
 `;
 
+export const renderGarage = (st: Store) => `
+  <h2 class='title'>Garage (${String(st.carsCount)})</h2>
+  <h3 class='subtitle'>Page #${String(st.carsPage)}</h3>
+  <ul class="garage">
+    ${st.cars
+    .map(
+      (car) => `
+      <li>${renderCar(car, false)}</li>
+    `,
+    )
+    .join('')}
+  </ul>
+`;
+
 export const renderWinners = (store: Store) => `
   <h2 class='title'>Winners (${store.winnersCount})</h2>
   <h3 class='subtitle'>Page #${store.winnersPage}</h3>
@@ -55,8 +55,8 @@ export const renderWinners = (store: Store) => `
     </thead>
     <tbody>
       ${[...(<WinnersView[]>(<unknown>store.winners))]
-        .map((winner, index: number) => {
-          return `
+    .map((winner, index: number) => {
+      return `
             <tr>
               <td>${index + 1}</td>
               <td>${winner.car[0].name}</td>
@@ -64,8 +64,8 @@ export const renderWinners = (store: Store) => `
               <td>${winner.time}</td>
             </tr>
           `;
-        })
-        .join('')}
+    })
+    .join('')}
     </tbody>
   </table>
 `;

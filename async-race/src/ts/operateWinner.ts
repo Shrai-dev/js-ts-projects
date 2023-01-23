@@ -1,8 +1,13 @@
 import { Winner } from './interfaces';
 import { getCar } from './operateCar';
-import { WINNERS_URL } from './url';
+import { WINNERS_URL } from './constants';
 
-export const getWinners = async (page: number, limit = 10, srt: string, ord: string) => {
+const getSortOrder = (sort: string, order: string) => {
+  if (sort && order) return `&_sort=${sort}&_order=${order}`;
+  return '';
+};
+
+export const getWinners = async (page: number, srt: string, ord: string, limit = 10) => {
   const response = await fetch(`${WINNERS_URL}?_page=${page}&_limit=${limit}${getSortOrder(srt, ord)}`, {
     method: 'GET',
   }).catch();
@@ -10,7 +15,7 @@ export const getWinners = async (page: number, limit = 10, srt: string, ord: str
 
   return {
     items: await Promise.all(
-      items.map(async (winner: { id: number }) => ({ ...winner, car: await getCar(winner.id) }))
+      items.map(async (winner: { id: number }) => ({ ...winner, car: await getCar(winner.id) })),
     ),
     count: response.headers.get('X-Total-Count'),
   };
@@ -18,8 +23,11 @@ export const getWinners = async (page: number, limit = 10, srt: string, ord: str
 
 export const deleteWinner = async (winners: string, id: number) =>
   (await fetch(`${winners}/${id}`, { method: 'DELETE' })).json();
+
 export const getWinnerStatus = async (id: number) => (await fetch(`${WINNERS_URL}/${id}`)).status;
+
 export const getWinner = async (id: number) => (await fetch(`${WINNERS_URL}/${id}`)).json();
+
 export const createWinner = async (body: Winner) =>
   (
     await fetch(WINNERS_URL, {
@@ -60,15 +68,10 @@ export const saveWinner = async ({ id, time }: Winner) => {
   }
 };
 
-const getSortOrder = (sort: string, order: string) => {
-  if (sort && order) return `&_sort=${sort}&_order=${order}`;
-  return '';
-};
-
 export const racer = async (
   eng: string,
   st: { cars: number[] },
-  action: (arg0: any, arg1: number) => Promise<string[]>
+  action: (arg0: string, arg1: number) => Promise<string[]>,
 ) => {
   const promises = await st.cars.map((id: number) => action(eng, id));
 
